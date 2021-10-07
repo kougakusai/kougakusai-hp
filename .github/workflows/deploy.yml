@@ -11,7 +11,7 @@ jobs:
     # Ubuntu OSを仮想マシン上に用意する
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
 
       # Node.js環境のセットアップを行う
       - name: Setup node
@@ -28,7 +28,7 @@ jobs:
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
-          path: ${{ step.yarn-cache-dir-path.outputs.dir }}
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
