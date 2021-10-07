@@ -1,0 +1,72 @@
+name: deploy to GitHub Pages
+
+# mainブランチのpushイベントでjobsを発火
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    # Ubuntu OSを仮想マシン上に用意する
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+
+      # Node.js環境のセットアップを行う
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+
+      # yarn installの際にキャッシュを使う
+      # https://github.com/actions/cache/blob/main/examples.md#node---yarn
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ step.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      # yarn.lockに基づき依存パッケージをインストールする
+      - name: yarn install
+        run: yarn install --frozen-lockfile
+
+      # Next.jsアプリをビルドする
+      # プロジェクトルート直下に.nextディレクトリができる
+      - name: yarn build
+        run: yarn build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /kougakusai-hp
+
+      # 静的なHTMLとしてNext.jsアプリを生成する
+      # プロジェクトルート直下にoutディレクトリができる
+      # そのなかに、HTMLファイル群と、それらが読み込むJSファイル群を収めた_nextディレクトリがある
+      - name: Export static files
+        run: yarn run export
+        env:
+          NEXT_PUBLIC_BASE_PATH: /kougakusai-hp
+
+      # sitemap作成
+      # - name: next-sitemap
+      #   run: next-sitemap
+
+      # しかしGitHub Pagesの仕様として_から始まるディレクトリが見えず404となる
+      # つまりHTMLからJSを読み込めない
+      # これを回避するために.nojekyllファイルをoutディレクトリに作る
+      - name: Add .nojekyll
+        run: touch ./out/.nojekyll
+
+      # gh-pagesブランチにoutディレクトリの中身をプッシュする
+      # gh-pagesブランチは自動的に作成される
+      - name: Push to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./out
