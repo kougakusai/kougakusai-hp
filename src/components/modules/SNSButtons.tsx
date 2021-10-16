@@ -5,11 +5,21 @@ type Props = {
   className?: string;
 };
 
-const Accounts = [
+const accounts = [
   {
     title: "Twitter",
     url: "https://twitter.com/kougakufes",
     imagePath: "./twitter.svg",
+  },
+  {
+    title: "Instagram",
+    url: "#",
+    imagePath: "./instagram.png",
+  },
+  {
+    title: "note",
+    url: "https://note.com/mtea/m/m4e45de2664ba/",
+    imagePath: "./note.svg",
   },
 ];
 
@@ -18,7 +28,7 @@ const SNSButtons: VFC<Props> = (props) => {
     <div className={clsx("text-white", props.className)}>
       <p className="mb-[10px] k-lg:mb-[15px]">FOLLOW US</p>
       <ul className="flex flex-wrap">
-        {Accounts.map(({ title, url, imagePath }) => {
+        {accounts.map(({ title, url, imagePath }) => {
           return (
             <li key={title} className="flex">
               <a
