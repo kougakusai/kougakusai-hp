@@ -40,11 +40,13 @@ const Header: VFC = () => {
           />
         </div>
         <div className="w-full px-[15%] py-[10px]">
-          <Link href="/">
-            <a onClick={() => setIsExpand(false)}>
-              <img src="./home.svg" alt="TOPへ" width="44px" />
-            </a>
-          </Link>
+          <div className="w-[44px]">
+            <Link href="/">
+              <a onClick={() => setIsExpand(false)}>
+                <img src="./home.svg" alt="TOPへ" width="44px" />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
 
