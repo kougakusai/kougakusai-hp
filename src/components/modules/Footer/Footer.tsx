@@ -5,10 +5,7 @@ const Footer: VFC = () => {
   return (
     <footer className="bg-k-navy-black text-white">
       <div>
-        <div>
-          <p>FOLLOW US</p>
-          Twitter Instagram
-        </div>
+        <div>{/* <SnsButton /> */}</div>
         <ul className="">
           <li>
             <Link href="/">
