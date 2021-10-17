@@ -28,7 +28,13 @@ const links = [
 
 const Footer: VFC = () => {
   return (
-    <footer className="mb-[104px] k-lg:mb-0 w-full k-lg:w-[calc(100%-20vw)] bg-k-navy-black text-white text-[1.8rem] px-[10%] pt-[10%] pb-[130px] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%] absolute bottom-0 k-lg:right-0">
+    <footer
+      className={clsx(
+        "k-lg:ml-auto w-full k-lg:w-[calc(100%-20vw)]",
+        "bg-k-navy-black text-white text-[1.8rem]",
+        "px-[10%] pt-[10%] pb-[130px] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%]"
+      )}
+    >
       <div>
         <SNSButtons className="mb-[20px]" />
         <ul className="space-y-[10px]">
