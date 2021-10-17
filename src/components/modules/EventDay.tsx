@@ -8,7 +8,7 @@ type Props = {
 const EventDay: VFC<Props> = (props) => {
   return (
     <div className={clsx(props.className)}>
-      <div className="z-10 w-[120px] h-[115px] relative k-lg:scale-[1.60] k-lg:top-[25px] k-lg:right-[25px]">
+      <div className="z-10 w-[120px] h-[115px] relative k-lg:scale-[1.60] k-lg:top-[34px] k-lg:right-[36px]">
         {/* ↓navy polygon: z-index=30*/}
         <div
           className={clsx(
