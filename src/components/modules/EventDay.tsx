@@ -13,21 +13,21 @@ const EventDay: VFC<Props> = (props) => {
         props.className
       )}
     >
-      <div className="w-[100px] h-[100px]">
+      <div className="w-[100px] h-[100px] relative">
         <div
           className={clsx(
             "z-30 top-0 right-0",
             "bg-k-navy-dark w-[95px] h-[65px] absolute mb-[15px]",
             "flex justify-center items-center",
             "after:w-[95px] after:h-0 after:absolute after:bottom-0 after:left-0",
-            "after:border-t-k-navy-dark after:border-t-[30px]",
+            "after:border-t-k-navy-dark after:border-t-[31px]",
             "after:border-l-[30px] after:border-l-transparent",
             "after:border-r-0 after:border-b-0",
-            "after:top-[99%]"
+            "after:top-[99%]" /* div本体―after間に隙間ができることの防止 */
           )}
         >
           {/* ↓開催日表示 */}
-          <div className="text-[#94DD26] text-xl font-semibold text-center translate-y-[15px] z-30 brightness-125 saturate-200 glitch">
+          <div className="text-[#94DD26] text-3xl font-semibold text-center translate-y-[15px] z-30 brightness-125 saturate-200 glitch">
             開催
             <br />
             2021

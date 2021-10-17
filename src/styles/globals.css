@@ -138,6 +138,8 @@ body {
 .menu-list-exit-done {
   bottom: -40vh;
 }
+
+/* ↓Glitchエフェクト */
 /* ref=["https://www.youtube.com/watch?v=7Xyg8Ja7dyY", "https://codepen.io/kevinpowell/pen/YzqerQm" */
 .glitch {
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
