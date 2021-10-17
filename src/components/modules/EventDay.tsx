@@ -7,43 +7,38 @@ type Props = {
 
 const EventDay: VFC<Props> = (props) => {
   return (
-    <div
-      className={clsx(
-        "z-10 absolute top-0 right-0 k-lg:top-[25px] k-lg:right-[25px] k-lg:scale-150",
-        props.className
-      )}
-    >
-      <div className="w-[100px] h-[100px] relative">
+    <div className={clsx(props.className)}>
+      <div className="z-10 w-[120px] h-[115px] relative k-lg:scale-[1.60] k-lg:top-[25px] k-lg:right-[25px]">
+        {/* ↓navy polygon: z-index=30*/}
         <div
           className={clsx(
             "z-30 top-0 right-0",
-            "bg-k-navy-dark w-[95px] h-[65px] absolute mb-[15px]",
+            "bg-k-navy-dark w-[117px] h-[72px] absolute mb-[33px]",
             "flex justify-center items-center",
-            "after:w-[95px] after:h-0 after:absolute after:bottom-0 after:left-0",
-            "after:border-t-k-navy-dark after:border-t-[31px]",
-            "after:border-l-[30px] after:border-l-transparent",
+            "after:w-[117px] after:h-0 after:absolute after:bottom-0 after:left-0",
+            "after:border-t-k-navy-dark after:border-t-[40px]" /* div本体―after間に隙間ができることの防止 */,
+            "after:border-l-[40px] after:border-l-transparent",
             "after:border-r-0 after:border-b-0",
             "after:top-[99%]" /* div本体―after間に隙間ができることの防止 */
           )}
         >
-          {/* ↓開催日表示 */}
-          <div className="text-[#94DD26] text-3xl font-semibold text-center translate-y-[15px] z-30 brightness-125 saturate-200 glitch">
-            開催
-            <br />
-            2021
-            <br />
-            11.06
+          {/* ↓開催日表示テキスト:z-index=30 */}
+          <div className="z-30 k-lg:scale-[0.8] text-center translate-x-[5px] translate-y-[20px] text-[#94DD26] text-4xl font-medium slashed-zero brightness-125 saturate-200 glitch">
+            <p className="font-bold tracking-[0.8rem]">開催</p>
+            <p className="font-semibold tracking-[0.5rem]">2021</p>
+            <p>11.06</p>
           </div>
         </div>
+        {/* ↓lime polygon:z-index=20 */}
         <div
           className={clsx(
             "z-20",
-            "bg-[#94DD26] w-[100px] h-[70px] absolute mb-[40px] top-0",
-            "after:w-[100px] after:h-0 after:absolute after:bottom-0 after:left-0",
-            "after:border-t-[#94DD26] after:border-t-[30px]",
-            "after:border-l-[30px] after:border-l-transparent",
+            "bg-[#94DD26] w-[120px] h-[74px] absolute mb-[40px] top-0",
+            "after:w-[120px] after:h-0 after:absolute after:bottom-0 after:left-0",
+            "after:border-t-[#94DD26] after:border-t-[41px]" /* div本体―after間に隙間ができることの防止 */,
+            "after:border-l-[40px] after:border-l-transparent",
             "after:border-r-0 after:border-b-0",
-            "after:top-full"
+            "after:top-[99%]" /* div本体―after間に隙間ができることの防止 */
           )}
         />
       </div>
