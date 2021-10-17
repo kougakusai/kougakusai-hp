@@ -2,6 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  font-size: 62.5%;
+}
+
+@screen k-lg {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  @apply bg-k-navy-light;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+.menu-btn-top-enter {
+  transform: rotate(0deg);
+  top: 6px;
+}
+
+.menu-btn-top-enter-active {
+  transition: 0.4s;
+  transform: rotate(225deg);
+  top: 20px;
+}
+
+.menu-btn-top-enter-done {
+  transform: rotate(225deg);
+  top: 20px;
+}
+
+.menu-btn-top-exit {
+  transform: rotate(225deg);
+  top: 20px;
+}
+
+.menu-btn-top-exit-active {
+  transition: 0.4s;
+  transform: rotate(0deg);
+  top: 6px;
+}
+
+.menu-btn-top-exit-done {
+  transform: rotate(0deg);
+  top: 6px;
+}
+
+.menu-btn-middle-enter {
+  transform: rotate(0deg);
+}
+
+.menu-btn-middle-enter-active {
+  transition: 0.4s;
+  transform: rotate(180deg);
+  background: transparent;
+}
+
+.menu-btn-middle-enter-done {
+  transform: rotate(180deg);
+  background: transparent;
+}
+
+.menu-btn-middle-exit {
+  transform: rotate(180deg);
+  background: transparent;
+}
+
+.menu-btn-middle-exit-active {
+  transition: 0.4s;
+  transform: rotate(0deg);
+  background: white;
+}
+
+.menu-btn-middle-exit-done {
+  transform: rotate(0deg);
+  background: white;
+}
+
+.menu-btn-bottom-enter {
+  transform: rotate(0deg);
+  top: 34px;
+}
+
+.menu-btn-bottom-enter-active {
+  transition: 0.4s;
+  transform: rotate(135deg);
+  top: 20px;
+}
+
+.menu-btn-bottom-enter-done {
+  transform: rotate(135deg);
+  top: 20px;
+}
+
+.menu-btn-bottom-exit {
+  transform: rotate(135deg);
+  top: 20px;
+}
+
+.menu-btn-bottom-exit-active {
+  transition: 0.4s;
+  transform: rotate(0deg);
+  top: 34px;
+}
+
+.menu-btn-bottom-exit-done {
+  transform: rotate(0deg);
+  top: 34px;
+}
+
+.menu-list-enter {
+  bottom: -40vh;
+}
+
+.menu-list-enter-active {
+  transition: 0.4s;
+  bottom: 104px;
+}
+
+.menu-list-enter-done {
+  bottom: 104px;
+}
+
+.menu-list-exit {
+  bottom: 104px;
+}
+
+.menu-list-exit-active {
+  transition: 0.4s;
+  bottom: -40vh;
+}
+
+.menu-list-exit-done {
+  bottom: -40vh;
+}
 /* ref=["https://www.youtube.com/watch?v=7Xyg8Ja7dyY", "https://codepen.io/kevinpowell/pen/YzqerQm" */
 .glitch {
   text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
@@ -65,19 +201,5 @@
     text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
       -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
       -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
-    animation-delay: -1ms !important;
-    animation-duration: 1ms !important;
-    animation-iteration-count: 1 !important;
-    background-attachment: initial !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0s !important;
-    transition-delay: 0s !important;
   }
 }
