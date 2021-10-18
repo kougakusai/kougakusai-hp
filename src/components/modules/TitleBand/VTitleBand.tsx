@@ -18,11 +18,7 @@ const VTitleBand: VFC<Props> = (props) => {
         className="relative w-[1080px] h-[110px] origin-bottom-left transform rotate-90"
         style={{ backgroundImage: "url('./rect.svg')" }}
       >
-        <div
-          className={clsx(
-            "absolute top-[40%] left-[20vh] text-white text-k-6xl font-semibold"
-          )}
-        >
+        <div className="absolute top-[40%] left-[20vh] text-white text-[3.5rem] font-semibold">
           {props.text}
         </div>
       </div>

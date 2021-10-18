@@ -19,8 +19,8 @@ const HTitleBand: VFC<Props> = (props) => {
       <img src="./decoration.svg" className="w-[40px]" />
       <h2
         className={clsx(
-          "pb-[2px] ml-[5px] text-k-3xl font-black",
-          "k-lg:text-k-4xl k-lg:font-extrabold"
+          "pb-[2px] ml-[5px] text-[1.8rem] leading-[75px] font-black",
+          "k-lg:text-[2.5rem] k-lg:leading-[110px] k-lg:font-extrabold"
         )}
       >
         {props.text}
