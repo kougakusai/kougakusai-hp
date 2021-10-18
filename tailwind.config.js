@@ -27,6 +27,10 @@ module.exports = {
         "k-sm": "481px",
         "k-lg": "960px",
       },
+      fontSize: {
+        "k-3xl": ["1.8rem", "75px"],
+        "k-4xl": ["2.5rem", "110px"],
+      },
     },
   },
   variants: {
