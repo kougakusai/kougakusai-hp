@@ -22,22 +22,34 @@ const Home: NextPage = () => {
         <title>2020年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <main className="k-lg:w-[calc(100%-20vw)] ml-auto">
-        {/* <div className={clsx("flex items-center justify-center")}>
-          <div
-            className={clsx(
-              "w-full h-[737px] k-sm:h-[1366px] k-lg:h-[1080px] flex",
-              "bg-center bg-cover bg-origin-content box-border bg-no-repeat",
-              "bg-pre-sm k-sm:bg-pre-md k-lg:bg-pre-lg text-center"
-            )}
-          >
-            <h1 className="items-center">
-              <img src="/title.png" className="border-none" />
-            </h1>
-          </div>
-        </div> */}
+        <div
+          className="w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden"
+          style={{ backgroundImage: "url(./background_pre_sm.png)" }}
+        />
+        <div
+          className="w-full h-0 pt-[133%] bg-center bg-cover bg-no-repeat hidden k-sm:block k-lg:hidden"
+          style={{ backgroundImage: "url(./background_pre_md.png)" }}
+        />
+        <div
+          className="w-full h-0 pt-[56.25%] bg-center bg-cover bg-no-repeat hidden k-lg:block"
+          style={{ backgroundImage: "url(./background_pre_lg.png)" }}
+        />
+        <h1
+          className={clsx(
+            "absolute top-[50px] left-[calc(50%-60vw)]",
+            "k-sm:top-[15vw] k-sm:left-[calc(50%-32vw)]",
+            "k-lg:top-[5vh] k-lg:left-[calc(50%-13vw)] m-auto"
+          )}
+        >
+          <img
+            src="/title.png"
+            alt="こうがく祭"
+            className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
+          />
+        </h1>
         <article
           className={clsx(
-            "p-[10%] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%] k-lg:min-h-[500px]",
+            "p-[10%] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%] k-lg:min-h-[500px] static",
             "space-y-[50px] text-[1.8rem] bg-white items-center"
           )}
         >

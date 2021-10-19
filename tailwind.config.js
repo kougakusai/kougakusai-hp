@@ -27,11 +27,6 @@ module.exports = {
         "k-sm": "481px",
         "k-lg": "960px",
       },
-      backgroundImage: {
-        "pre-lg": "url('/background_pre_lg.png')",
-        "pre-md": "url('/background_pre_md.png')",
-        "pre-sm": "url('/background_pre_sm.png')",
-      },
     },
   },
   variants: {
