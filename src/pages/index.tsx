@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           )}
         >
           <img
-            src="/title.png"
+            src="./title.png"
             alt="こうがく祭"
             className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
           />
