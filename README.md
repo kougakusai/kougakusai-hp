@@ -1,22 +1,59 @@
+# [こうがく祭 HP](https://kougakusai.github.io/kougakusai-hp/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-First, run the development server:
+次のコマンドで必要なパッケージをインストールしてください。
 
-```bash
-npm run dev
-# or
-yarn dev
+```
+$ yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 開発用サーバで動作確認する場合
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+次のコマンドで開発サーバを起動可能です。
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+$ yarn dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+起動後は[http://localhost:3000](http://localhost:3000)にアクセスすることでサイトが閲覧できます。
+
+### 静的サイトとして動作確認する場合
+
+次のコマンドで静的サイトを生成可能です。
+
+```
+$ yarn run gen
+```
+
+生成後は`out/index.html`を開くことで静的サイトが閲覧できます。
+
+## Available Scripts
+
+### `yarn dev`
+
+開発用サーバを起動します。
+
+[http://localhost:3000](http://localhost:3000)からアクセス可能です。
+
+### `yarn gen`
+
+ソースコードから静的サイトを生成します。成果物は`out/`に出力されます。
+
+GitHub Pages にデプロイされるものと同じ状態なので、ローカルで確認したい場合に使用してください。
+
+### `yarn run fix`
+
+`src/`配下の`.ts`、`.tsx`ファイルに対して静的解析と整形を行います。
+
+VSCode で編集している場合は保存時に自動実行されるようになっているので、基本的には手動で実行する必要はありません。
+
+## Notes
+
+- `npm`は使用できません。`yarn`を使用してください。
+- VSCode に ESLint と Prettier の拡張機能を導入のうえ編集することをお勧めします。その他のエディタで編集する場合は、コミット前に必ず`yarn run fix`で整形するようにしてください。
 
 ## Learn More
 
@@ -26,9 +63,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
