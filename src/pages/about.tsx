@@ -8,9 +8,15 @@ export default function About() {
       <Head>
         <title>2020年こうがく祭公式HP | 茨城大学</title>
       </Head>
-      <main>
-        <p>pages:about</p>
-      </main>
+      <article className="relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
+        <p className="p-2 mb-[50px] text-[1.5rem] k-lg:text-[1.8rem]">
+          昨年度のこうがく祭はオンラインでの開催となりました。
+          <br />
+          オンライン開催では研究室紹介やサークル企画等を特設サイト上にて掲載しました。今年度の開催方法については未定です。
+          決まり次第お知らせいたします。
+          <br />
+        </p>
+      </article>
     </>
   );
 }
