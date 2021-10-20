@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       <Head>
         <title>2020年こうがく祭公式HP | 茨城大学</title>
       </Head>
-      <main className="k-lg:w-[calc(100%-20vw)] ml-auto">
+      <main>
         <div
           className="w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden"
           style={{ backgroundImage: "url(./background_pre_sm.png)" }}
@@ -49,7 +49,7 @@ const Home: NextPage = () => {
         </h1>
         <article
           className={clsx(
-            "p-[10%] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%] k-lg:min-h-[500px] static",
+            "k-lg:w-[calc(100%-20vw)] k-lg:min-h-[500px] k-lg:ml-auto p-[10%] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%]",
             "space-y-[50px] text-[1.8rem] bg-white items-center"
           )}
         >
