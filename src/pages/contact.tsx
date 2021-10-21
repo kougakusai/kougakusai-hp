@@ -36,8 +36,10 @@ const Contact = () => {
       <Head>
         <title>2020年こうがく祭公式HP | 茨城大学</title>
       </Head>
-      <article className="text-[1.8rem]">
-        <p>質問等があれば下記連絡先へお気軽にお問い合わせください。</p>
+      <article className="text-[1.5rem] k-lg:text-[1.8rem] relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
+        <p className="p-2">
+          質問等があれば下記連絡先へお気軽にお問い合わせください。
+        </p>
         <br />
         <div className="space-y-[50px]">
           {contacts.map(({ type, name, text, link }) => {
@@ -55,7 +57,7 @@ const Contact = () => {
                     return false;
                   }}
                 >
-                  {text}
+                  <p className="p-2">{text}</p>
                 </a>
               </div>
             );
