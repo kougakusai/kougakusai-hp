@@ -33,34 +33,32 @@ const contacts = [
 
 const Contact = () => {
   return (
-    <>
-      <article className="text-[1.8rem]">
-        <p>質問等があれば下記連絡先へお気軽にお問い合わせください。</p>
-        <br />
-        <div className="space-y-[50px]">
-          {contacts.map(({ type, name, text, link }) => {
-            return (
-              <div key={type}>
-                <Subtitle text={name} />
-                <a
-                  onClick={() => {
-                    const jump: boolean = confirm(
-                      `${type}でこうがく祭へ連絡を取りますか？\n（${type}を開きます。）`
-                    );
-                    if (jump) {
-                      window.open(`${link}`, "_blank", "noreferrer");
-                    }
-                    return false;
-                  }}
-                >
-                  {text}
-                </a>
-              </div>
-            );
-          })}
-        </div>
-      </article>
-    </>
+    <article className="text-[1.8rem]">
+      <p>質問等があれば下記連絡先へお気軽にお問い合わせください。</p>
+      <br />
+      <div className="space-y-[50px]">
+        {contacts.map(({ type, name, text, link }) => {
+          return (
+            <div key={type}>
+              <Subtitle text={name} />
+              <a
+                onClick={() => {
+                  const jump: boolean = confirm(
+                    `${type}でこうがく祭へ連絡を取りますか？\n（${type}を開きます。）`
+                  );
+                  if (jump) {
+                    window.open(`${link}`, "_blank", "noreferrer");
+                  }
+                  return false;
+                }}
+              >
+                {text}
+              </a>
+            </div>
+          );
+        })}
+      </div>
+    </article>
   );
 };
 
