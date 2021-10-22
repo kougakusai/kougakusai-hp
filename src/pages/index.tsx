@@ -1,7 +1,8 @@
 import clsx from "clsx";
-import type { NextPage } from "next";
-import Link from "next/link";
+import type { ReactElement } from "react";
 import Head from "next/head";
+import Link from "next/link";
+import DefaultLayout from "src/components/templates/DefaultLayout";
 import Subtitle from "src/components/modules/Subtitle";
 
 const announce = [
@@ -15,7 +16,7 @@ const announce = [
   },
 ];
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
       <Head>
@@ -62,7 +63,9 @@ const Home: NextPage = () => {
             <p>
               詳しくは
               <Link href="/about">
-                <a>オンライン開催について</a>
+                <a className="underline text-k-blue-dark cursor-pointer">
+                  オンライン開催について
+                </a>
               </Link>
               をご覧ください。
             </p>
@@ -84,6 +87,8 @@ const Home: NextPage = () => {
       </main>
     </>
   );
-};
+}
 
-export default Home;
+Home.getLayout = function getLayout(page: ReactElement) {
+  return <DefaultLayout>{page}</DefaultLayout>;
+};
