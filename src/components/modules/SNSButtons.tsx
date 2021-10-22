@@ -11,17 +11,17 @@ const accounts = [
   {
     title: "Twitter",
     url: "https://twitter.com/kougakufes",
-    imagePath: "./twitter.svg",
+    imagePath: "/twitter.svg",
   },
   {
     title: "Instagram",
     url: "https://www.instagram.com/kougakufes/",
-    imagePath: "./instagram.png",
+    imagePath: "/instagram.png",
   },
   {
     title: "note",
     url: "https://note.com/mtea/m/m4e45de2664ba/",
-    imagePath: "./note.svg",
+    imagePath: "/note.svg",
   },
 ];
 
