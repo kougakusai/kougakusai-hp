@@ -5,6 +5,8 @@ import Link from "next/link";
 import DefaultLayout from "src/components/templates/DefaultLayout";
 import Subtitle from "src/components/modules/Subtitle";
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const announce = [
   {
     date: "11月06日",
@@ -25,15 +27,15 @@ export default function Home() {
       <main>
         <div
           className="w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden"
-          style={{ backgroundImage: "url(./background_pre_sm.png)" }}
+          style={{ backgroundImage: `url(${prefix}/background_pre_sm.png)` }}
         />
         <div
           className="w-full h-0 pt-[133%] bg-center bg-cover bg-no-repeat hidden k-sm:block k-lg:hidden"
-          style={{ backgroundImage: "url(./background_pre_md.png)" }}
+          style={{ backgroundImage: `url(${prefix}/background_pre_md.png)` }}
         />
         <div
           className="w-full h-0 pt-[56.25%] bg-center bg-cover bg-no-repeat hidden k-lg:block"
-          style={{ backgroundImage: "url(./background_pre_lg.png)" }}
+          style={{ backgroundImage: `url(${prefix}/background_pre_lg.png)` }}
         />
         <h1
           className={clsx(
@@ -43,7 +45,7 @@ export default function Home() {
           )}
         >
           <img
-            src="./title.png"
+            src={`${prefix}/title.png`}
             alt="こうがく祭"
             className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
           />
