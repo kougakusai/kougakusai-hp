@@ -13,7 +13,7 @@ const accounts = [
   },
   {
     title: "Instagram",
-    url: "#",
+    url: "https://www.instagram.com/kougakufes/",
     imagePath: "./instagram.png",
   },
   {
