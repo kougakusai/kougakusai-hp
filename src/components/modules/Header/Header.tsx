@@ -6,6 +6,8 @@ import { CSSTransition } from "react-transition-group";
 import MenuButton from "./MenuButton";
 import SNSButtons from "../SNSButtons";
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const links = [
   {
     pagePath: "/",
@@ -43,7 +45,7 @@ const Header: VFC = () => {
           <div className="w-[44px]">
             <Link href="/">
               <a onClick={() => setIsExpand(false)}>
-                <img src="./home.svg" alt="TOPへ" width="44px" />
+                <img src={`${prefix}/home.svg`} alt="TOPへ" width="44px" />
               </a>
             </Link>
           </div>
@@ -60,7 +62,7 @@ const Header: VFC = () => {
           <Link href="/">
             <a>
               <img
-                src="./logoWhite.svg"
+                src={`${prefix}/logoWhite.svg`}
                 alt="こうがく祭"
                 className="hidden k-lg:block w-full"
               />

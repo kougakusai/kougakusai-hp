@@ -5,21 +5,23 @@ type Props = {
   className?: string;
 };
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const accounts = [
   {
     title: "Twitter",
     url: "https://twitter.com/kougakufes",
-    imagePath: "./twitter.svg",
+    imagePath: "/twitter.svg",
   },
   {
     title: "Instagram",
     url: "https://www.instagram.com/kougakufes/",
-    imagePath: "./instagram.png",
+    imagePath: "/instagram.png",
   },
   {
     title: "note",
     url: "https://note.com/mtea/m/m4e45de2664ba/",
-    imagePath: "./note.svg",
+    imagePath: "/note.svg",
   },
 ];
 
@@ -37,7 +39,7 @@ const SNSButtons: VFC<Props> = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={imagePath} alt={title} width="44px" />
+                <img src={prefix + imagePath} alt={title} width="44px" />
               </a>
             </li>
           );
