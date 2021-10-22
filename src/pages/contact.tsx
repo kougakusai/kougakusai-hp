@@ -56,8 +56,9 @@ const Contact = () => {
                     }
                     return false;
                   }}
+                  className="p-2 underline text-k-blue-dark cursor-pointer"
                 >
-                  <p className="p-2">{text}</p>
+                  {text}
                 </a>
               </div>
             );

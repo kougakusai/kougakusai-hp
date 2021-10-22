@@ -63,7 +63,9 @@ export default function Home() {
             <p>
               詳しくは
               <Link href="/about">
-                <a>オンライン開催について</a>
+                <a className="underline text-k-blue-dark cursor-pointer">
+                  オンライン開催について
+                </a>
               </Link>
               をご覧ください。
             </p>
