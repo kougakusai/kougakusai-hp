@@ -5,6 +5,8 @@ type Props = {
   className?: string;
 };
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const accounts = [
   {
     title: "Twitter",
@@ -37,7 +39,7 @@ const SNSButtons: VFC<Props> = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={imagePath} alt={title} width="44px" />
+                <img src={prefix + imagePath} alt={title} width="44px" />
               </a>
             </li>
           );

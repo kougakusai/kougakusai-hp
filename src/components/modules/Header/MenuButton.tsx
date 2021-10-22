@@ -8,10 +8,12 @@ type Props = {
   className?: string;
 };
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const MenuButton: VFC<Props> = (props) => {
   return (
     <div className={clsx("relative w-[150px]", props.className)}>
-      <img src="./menuButton.svg" alt="MenuToggleButton" />
+      <img src={`${prefix}/menuButton.svg`} alt="MenuToggleButton" />
       <button
         className="absolute w-[70px] h-[60px] top-[calc(50%-25px)] left-[calc(50%-35px)]"
         onClick={props.toggleIsExpand}
@@ -38,7 +40,7 @@ const MenuButton: VFC<Props> = (props) => {
           <div className="absolute bg-white w-[50px] h-px top-[34px] left-[calc(50%-27px)]" />
         </CSSTransition>
         <img
-          src="./menuText.svg"
+          src={`${prefix}/menuText.svg`}
           alt="MenuText"
           width="55px"
           className="absolute top-[40px] left-[calc(50%-30px)]"

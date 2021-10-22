@@ -6,6 +6,8 @@ type Props = {
   className?: string;
 };
 
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const HTitleBand: VFC<Props> = (props) => {
   return (
     <div
@@ -16,7 +18,7 @@ const HTitleBand: VFC<Props> = (props) => {
       )}
       style={{ backgroundImage: "url('./rect.svg')" }}
     >
-      <img src="./decoration.svg" className="w-[40px]" />
+      <img src={`${prefix}/decoration.svg`} className="w-[40px]" />
       <h2
         className={clsx(
           "pb-[2px] ml-[5px] text-[1.8rem] leading-[75px] font-black",
