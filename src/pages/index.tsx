@@ -13,8 +13,8 @@ const announce = [
     detail: "こうがく祭開催予定",
   },
   {
-    date: "10月06日",
-    detail: "開催1ヵ月前",
+    date: "10月26日", // TODO 公開直前に日付を更新
+    detail: "2021年度版HPを公開しました。",
   },
 ];
 
@@ -25,6 +25,7 @@ export default function Home() {
         <title>2020年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <main>
+        {/* TODO 背景画像内の日付更新 */}
         <div
           className="w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden"
           style={{ backgroundImage: `url(${prefix}/background_pre_sm.png)` }}
@@ -60,10 +61,10 @@ export default function Home() {
             <Subtitle text="こうがく祭とは" />
             <p>こうがく祭は毎年11月に開催される茨城大学工学部の学園祭です。</p>
             <p>
-              工学部ならではの企画や研究室公開などがあり、毎年一般の方や学生の方含め多くの方にご来場していただいております。
+              工学部ならではの企画や研究室公開などがあり、毎年一般の方や学生の方含め多くの方にご来場いただいております。
             </p>
             <p>
-              詳しくは
+              今年度はオンラインでの開催となりました。詳しくは
               <Link href="/about">
                 <a className="underline text-k-blue-dark cursor-pointer">
                   オンライン開催について
