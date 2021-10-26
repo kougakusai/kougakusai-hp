@@ -19,18 +19,57 @@ const announce = [
 ];
 
 const titleText = () => {
-  if (new Date().getTime() < new Date("2021-11-06T10:00").getTime()) {
+  if (new Date().getTime() === new Date("2021-11-06T10:00").getTime()) {
+    //開催前
     return (
-      <>
+      <span
+        className={clsx(
+          "mt-[-35%] k-sm:mt-[-20%] k-lg:mt-[-18%]",
+          "pl-[25vw] k-sm:pl-[6vw] k-lg:pl-[3vw]",
+          "w-10/12 k-sm:w-3/4 k-lg:w-full float-left",
+          "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
+          "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+        )}
+      >
         オンライン開催
         <br />
         11月06日(土) 10:00配信開始
-      </>
-    ); //開催前
+      </span>
+    );
   } else if (new Date().getTime() < new Date("2021-11-06T15:00").getTime()) {
-    return "オンライン開催 YouTubeLiveで配信中"; //開催中
+    //開催中
+    return (
+      <span
+        className={clsx(
+          "mt-[-35%] k-sm:mt-[-20%] k-lg:mt-[-18%]",
+          "pl-[30vw] k-sm:pl-[14vw] k-lg:pl-[5vw]",
+          "w-10/12 k-sm:w-3/4 k-lg:w-full float-left",
+          "text-[8vw] k-sm:text-[5vw] k-lg:text-[3vw] text-center leading-normal tracking-widest",
+          "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+        )}
+      >
+        オンライン開催
+        <br />
+        YouTubeLiveで配信中
+      </span>
+    );
   } else {
-    return "2021年こうがく祭は終了しました ご覧いただいた皆様ありがとうございました"; //開催後
+    //開催後
+    return (
+      <span
+        className={clsx(
+          "mt-[-35%] k-sm:mt-[-18%] k-lg:mt-[-12%]",
+          "pl-[20vw] k-sm:pl-[5vw] k-lg:pl-0 k-lg:ml-[-8%]",
+          "w-[90%] k-sm:w-3/4 k-lg:w-full float-left",
+          "text-[7vw] k-sm:text-[4.7vw] k-lg:text-[2.6vw] text-center leading-normal tracking-widest",
+          "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+        )}
+      >
+        2021年こうがく祭は終了しました
+        <br />
+        ご覧いただいた皆様ありがとうございました
+      </span>
+    );
   }
 };
 
@@ -69,17 +108,7 @@ export default function Home() {
             alt="こうがく祭"
             className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
           />
-          <span
-            className={clsx(
-              "mt-[-35%] k-sm:mt-[-20%] k-lg:mt-[-18%]",
-              "pl-[25vw] k-sm:pl-[6vw] k-lg:pl-[3vw]",
-              "w-10/12 k-sm:w-3/4 k-lg:w-full float-left",
-              "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
-              "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
-            )}
-          >
-            {titleText()}
-          </span>
+          {titleText()}
         </h1>
         <article
           className={clsx(
