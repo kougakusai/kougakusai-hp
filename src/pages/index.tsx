@@ -18,6 +18,22 @@ const announce = [
   },
 ];
 
+const titleText = () => {
+  if (new Date().getTime() < new Date("2021-11-06T10:00").getTime()) {
+    return (
+      <>
+        オンライン開催
+        <br />
+        11月06日(土) 10:00配信開始
+      </>
+    ); //開催前
+  } else if (new Date().getTime() < new Date("2021-11-06T15:00").getTime()) {
+    return "オンライン開催 YouTubeLiveで配信中"; //開催中
+  } else {
+    return "2021年こうがく祭は終了しました ご覧いただいた皆様ありがとうございました"; //開催後
+  }
+};
+
 export default function Home() {
   return (
     <>
@@ -27,16 +43,19 @@ export default function Home() {
       <main>
         {/* TODO 背景画像内の日付更新 */}
         <div
-          className="w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden"
-          style={{ backgroundImage: `url(${prefix}/background_pre_sm.png)` }}
+          className={clsx(
+            "w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden",
+            "text-white text-4xl font-bold"
+          )}
+          style={{ backgroundImage: `url(${prefix}/background_sm.png)` }}
         />
         <div
           className="w-full h-0 pt-[133%] bg-center bg-cover bg-no-repeat hidden k-sm:block k-lg:hidden"
-          style={{ backgroundImage: `url(${prefix}/background_pre_md.png)` }}
+          style={{ backgroundImage: `url(${prefix}/background_md.png)` }}
         />
         <div
           className="w-full h-0 pt-[56.25%] bg-center bg-cover bg-no-repeat hidden k-lg:block"
-          style={{ backgroundImage: `url(${prefix}/background_pre_lg.png)` }}
+          style={{ backgroundImage: `url(${prefix}/background_lg.png)` }}
         />
         <h1
           className={clsx(
@@ -50,6 +69,17 @@ export default function Home() {
             alt="こうがく祭"
             className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
           />
+          <span
+            className={clsx(
+              "mt-[-35%] k-sm:mt-[-20%] k-lg:mt-[-18%]",
+              "pl-[25vw] k-sm:pl-[6vw] k-lg:pl-[3vw]",
+              "w-10/12 k-sm:w-3/4 k-lg:w-full float-left",
+              "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
+              "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+            )}
+          >
+            {titleText()}
+          </span>
         </h1>
         <article
           className={clsx(
