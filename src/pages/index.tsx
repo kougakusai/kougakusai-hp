@@ -56,6 +56,11 @@ export default function Home() {
             "space-y-[50px] text-[1.8rem] bg-white items-center"
           )}
         >
+          <section className="text-9xl font-black border-8">
+            <Link href="/live">
+              <a>Youtube Live TESTPAGE HERE!</a>
+            </Link>
+          </section>
           <section>
             <Subtitle text="こうがく祭とは" />
             <p>こうがく祭は毎年11月に開催される茨城大学工学部の学園祭です。</p>
