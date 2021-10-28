@@ -7,16 +7,84 @@ import Subtitle from "src/components/modules/Subtitle";
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
-const announce = [
+const announcement = [
   {
     date: "11月06日",
     detail: "こうがく祭開催予定",
   },
   {
-    date: "10月06日",
-    detail: "開催1ヵ月前",
+    date: "10月26日", // TODO 公開直前に日付を更新
+    detail: "2021年度版HPを公開しました。",
   },
 ];
+
+const startTime = "2021-11-06T10:00:00+0900";
+const endTime = "2021-11-06T15:00:00+0900";
+
+const headline = {
+  //背景画像文字
+  //開催前
+  before: (
+    <span
+      className={clsx(
+        "mt-[-35%] k-sm:mt-[-20%] k-lg:mt-[-18%]",
+        "pl-[25vw] k-sm:pl-[6vw] k-lg:pl-[3vw]",
+        "w-10/12 k-sm:w-3/4 k-lg:w-full float-left",
+        "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
+        "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+      )}
+    >
+      オンライン開催
+      <br />
+      11月06日(土) 10:00配信開始
+    </span>
+  ),
+  //開催中
+  inSession: (
+    <span
+      className={clsx(
+        "mt-[-35%] k-sm:mt-[-20%] k-lg:mt-[-18%]",
+        "pl-[30vw] k-sm:pl-[14vw] k-lg:pl-[5vw]",
+        "w-10/12 k-sm:w-3/4 k-lg:w-full float-left",
+        "text-[8vw] k-sm:text-[5vw] k-lg:text-[3vw] text-center leading-normal tracking-widest",
+        "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+      )}
+    >
+      オンライン開催
+      <br />
+      YouTubeLiveで配信中
+    </span>
+  ),
+  //開催後
+  after: (
+    <span
+      className={clsx(
+        "mt-[-35%] k-sm:mt-[-18%] k-lg:mt-[-12%]",
+        "pl-[20vw] k-sm:pl-[5vw] k-lg:pl-0 k-lg:ml-[-8%]",
+        "w-[90%] k-sm:w-3/4 k-lg:w-full float-left",
+        "text-[7vw] k-sm:text-[4.7vw] k-lg:text-[2.6vw] text-center leading-normal tracking-widest",
+        "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+      )}
+    >
+      2021年こうがく祭は終了しました
+      <br />
+      ご覧いただいた皆様ありがとうございました
+    </span>
+  ),
+};
+
+const headlineDate = () => {
+  if (new Date().getTime() < new Date(startTime).getTime()) {
+    //開催前
+    return headline.before;
+  } else if (new Date().getTime() < new Date(endTime).getTime()) {
+    //開催中
+    return headline.inSession;
+  } else {
+    //開催後
+    return headline.after;
+  }
+};
 
 export default function Home() {
   return (
@@ -25,17 +93,21 @@ export default function Home() {
         <title>2020年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <main>
+        {/* TODO 背景画像内の日付更新 */}
         <div
-          className="w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden"
-          style={{ backgroundImage: `url(${prefix}/background_pre_sm.png)` }}
+          className={clsx(
+            "w-full h-0 pt-[200%] bg-center bg-cover bg-no-repeat k-sm:hidden",
+            "text-white text-4xl font-bold"
+          )}
+          style={{ backgroundImage: `url(${prefix}/background_sm.png)` }}
         />
         <div
           className="w-full h-0 pt-[133%] bg-center bg-cover bg-no-repeat hidden k-sm:block k-lg:hidden"
-          style={{ backgroundImage: `url(${prefix}/background_pre_md.png)` }}
+          style={{ backgroundImage: `url(${prefix}/background_md.png)` }}
         />
         <div
           className="w-full h-0 pt-[56.25%] bg-center bg-cover bg-no-repeat hidden k-lg:block"
-          style={{ backgroundImage: `url(${prefix}/background_pre_lg.png)` }}
+          style={{ backgroundImage: `url(${prefix}/background_lg.png)` }}
         />
         <h1
           className={clsx(
@@ -49,6 +121,7 @@ export default function Home() {
             alt="こうがく祭"
             className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
           />
+          {headlineDate()}
         </h1>
         <article
           className={clsx(
@@ -60,10 +133,10 @@ export default function Home() {
             <Subtitle text="こうがく祭とは" />
             <p>こうがく祭は毎年11月に開催される茨城大学工学部の学園祭です。</p>
             <p>
-              工学部ならではの企画や研究室公開などがあり、毎年一般の方や学生の方含め多くの方にご来場していただいております。
+              工学部ならではの企画や研究室公開などがあり、毎年一般の方や学生の方含め多くの方にご来場いただいております。
             </p>
             <p>
-              詳しくは
+              今年度はオンラインでの開催となりました。詳しくは
               <Link href="/about">
                 <a className="underline text-k-blue-dark cursor-pointer">
                   オンライン開催について
@@ -75,7 +148,7 @@ export default function Home() {
           <section>
             <Subtitle text="お知らせ" />
             <ul>
-              {announce.map(({ date, detail }) => {
+              {announcement.map(({ date, detail }) => {
                 return (
                   <li className="h-[38px] leading-[38px]" key={date}>
                     <span className="w-[150px] mr-[30px]">{date}</span>
