@@ -1,24 +1,9 @@
 import { ReactElement } from "react";
 import Head from "next/head";
-import Link from "next/link";
 import ArticleLayout from "src/components/templates/ArticleLayout";
 import Subtitle from "src/components/modules/Subtitle";
 
-const companies = [
-  {
-    name: "茨大工業株式会社",
-  },
-  {
-    name: "工学部システムズ",
-  },
-  {
-    name: "こうがく祭商事",
-  },
-  {
-    name: "株式会社ユニキャスト",
-    pageUrl: "https://www.unicast.ne.jp/",
-  },
-];
+const companies = [];
 
 function Company() {
   return (
