@@ -1,5 +1,8 @@
 import type { VFC } from "react";
 import clsx from "clsx";
+import TwitterIcon from "./SVG/Twitter";
+import InstagramIcon from "./SVG/Instagram";
+import NoteIcon from "./SVG/Note";
 
 type Props = {
   className?: string;
@@ -7,21 +10,31 @@ type Props = {
 
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+const iconSize = " w-[32px] h-[32px] m-auto";
+
 const accounts = [
   {
     title: "Twitter",
     url: "https://twitter.com/kougakufes",
-    imagePath: "/twitter.svg",
+    image: (
+      <TwitterIcon
+        className={"hover:text-[#1D9BF0] duration-[400ms]" + iconSize}
+      />
+    ),
   },
   {
     title: "Instagram",
     url: "https://www.instagram.com/kougakufes/",
-    imagePath: "/instagram.svg",
+    image: <InstagramIcon className={iconSize} />,
   },
   {
     title: "note",
     url: "https://note.com/mtea/m/m4e45de2664ba/",
-    imagePath: "/note.svg",
+    image: (
+      <NoteIcon
+        className={"hover:text-[#41C9B4] duration-[400ms]" + iconSize}
+      />
+    ),
   },
 ];
 
@@ -30,7 +43,7 @@ const SNSButtons: VFC<Props> = (props) => {
     <div className={clsx("text-white", props.className)}>
       <p className="mb-[10px] k-lg:mb-[15px]">FOLLOW US</p>
       <ul className="flex flex-wrap">
-        {accounts.map(({ title, url, imagePath }) => {
+        {accounts.map(({ title, url, image }) => {
           return (
             <li key={title} className="flex">
               <a
@@ -38,14 +51,9 @@ const SNSButtons: VFC<Props> = (props) => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[44px] h-[44px] p-[6px] text-center items-center"
+                className="w-[44px] h-[44px] p-[6px] "
               >
-                <img
-                  src={prefix + imagePath}
-                  alt={title}
-                  width="32px"
-                  className="h-[32px] m-auto"
-                />
+                {image}
               </a>
             </li>
           );
