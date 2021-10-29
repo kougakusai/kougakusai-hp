@@ -55,8 +55,7 @@ const Header: VFC = () => {
         className={clsx(
           "bg-k-navy-dark fixed w-full max-h-[40vh] text-white z-40 transform duration-[400ms] ease-in-out",
           "k-lg:p-[20px] k-lg:bottom-0 k-lg:h-screen k-lg:max-h-screen k-lg:w-[20vw] k-lg:min-w-[250px] k-lg:transition-none",
-          { "bottom-[-40vh]": !isExpand },
-          { "bottom-[104px]": isExpand }
+          isExpand ? "bottom-[104px]" : "bottom-[-40vh]"
         )}
       >
         <Link href="/">

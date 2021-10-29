@@ -1,4 +1,4 @@
-import { useState, VFC } from "react";
+import { VFC } from "react";
 import clsx from "clsx";
 
 type Props = {
@@ -16,9 +16,7 @@ const MenuButton: VFC<Props> = (props) => {
 
       <button
         className="absolute w-[70px] h-[60px] top-[calc(50%-25px)] left-[calc(50%-35px)]"
-        onClick={() => {
-          props.toggleIsExpand();
-        }}
+        onClick={props.toggleIsExpand}
       >
         <div
           className={clsx(
