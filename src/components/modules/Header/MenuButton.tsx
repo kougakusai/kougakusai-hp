@@ -21,8 +21,7 @@ const MenuButton: VFC<Props> = (props) => {
         <div
           className={clsx(
             "absolute bg-white w-[50px] h-px left-[calc(50%-27px)] transform duration-[400ms] ease-in-out",
-            { "top-[6px]": !props.isExpand },
-            { "top-[20px] rotate-[225deg]": props.isExpand }
+            props.isExpand ? "top-[20px] rotate-[225deg]" : "top-[6px]"
           )}
         />
         <div
@@ -34,8 +33,7 @@ const MenuButton: VFC<Props> = (props) => {
         <div
           className={clsx(
             "absolute bg-white w-[50px] h-px left-[calc(50%-27px)] transform duration-[400ms] ease-in-out",
-            { "top-[34px]": !props.isExpand },
-            { "top-[20px] rotate-[135deg]": props.isExpand }
+            props.isExpand ? "top-[20px] rotate-[135deg]" : "top-[34px]"
           )}
         />
 
