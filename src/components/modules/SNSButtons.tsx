@@ -16,7 +16,7 @@ const accounts = [
   {
     title: "Instagram",
     url: "https://www.instagram.com/kougakufes/",
-    imagePath: "/instagram.png",
+    imagePath: "/instagram.svg",
   },
   {
     title: "note",
@@ -38,8 +38,14 @@ const SNSButtons: VFC<Props> = (props) => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-[44px] h-[44px] p-[6px] text-center items-center"
               >
-                <img src={prefix + imagePath} alt={title} width="44px" />
+                <img
+                  src={prefix + imagePath}
+                  alt={title}
+                  width="32px"
+                  className="h-[32px] m-auto"
+                />
               </a>
             </li>
           );
