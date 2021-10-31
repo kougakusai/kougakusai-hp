@@ -13,11 +13,8 @@ const NoteIcon: VFC<Props> = (props) => {
       width="167"
       height="188"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${props.className} fill-current text-white`}
+      className={`${props.className} fill-current text-white hover:text-[#41C9B4] duration-[400ms]`}
     >
-      <defs id="defs12" />
-      <title id="title2">white/logo_symbol</title>
-      <desc id="desc4">Created with Sketch.</desc>
       <g
         id="white/logo_symbol"
         stroke="none"

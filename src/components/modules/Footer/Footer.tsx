@@ -1,7 +1,7 @@
 import type { VFC } from "react";
 import Link from "next/link";
 import clsx from "clsx";
-import SNSButtons from "../SNSButtons";
+import SNSButtons from "../SNSButtons/SNSButtons";
 
 const links = [
   {
