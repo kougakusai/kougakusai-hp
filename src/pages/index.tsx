@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>2020年こうがく祭公式HP | 茨城大学</title>
+        <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <main>
         {/* TODO 背景画像内の日付更新 */}

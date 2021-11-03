@@ -8,7 +8,7 @@ export default function Policy() {
   return (
     <>
       <Head>
-        <title>2020年こうがく祭公式HP | 茨城大学</title>
+        <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <article className="relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
         <p className="p-2 text-[1.5rem] k-lg:text-[1.8rem] mb-[50px]">

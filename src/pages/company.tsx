@@ -76,7 +76,7 @@ function Company() {
   return (
     <>
       <Head>
-        <title>2020年こうがく祭公式HP | 茨城大学</title>
+        <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <article className="text-[1.8rem]">
         <div className="mb-[50px]">

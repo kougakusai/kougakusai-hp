@@ -8,7 +8,7 @@ export default function Custom404() {
   return (
     <>
       <Head>
-        <title>2020年こうがく祭公式HP | 茨城大学</title>
+        <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <article className="relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
         <Subtitle text="404 NotFound" />
