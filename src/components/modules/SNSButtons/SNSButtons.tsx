@@ -8,7 +8,7 @@ type Props = {
   className?: string;
 };
 
-const iconSize = " w-[32px] h-[32px] m-auto";
+const iconSize = "w-[32px] h-[32px] m-auto";
 
 const accounts = [
   {
@@ -41,7 +41,7 @@ const SNSButtons: VFC<Props> = (props) => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-[44px] h-[44px] p-[6px] "
+                className="w-[44px] h-[44px] p-[6px]"
               >
                 {icon}
               </a>

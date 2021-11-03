@@ -13,6 +13,10 @@ const links = [
     description: "オンライン開催について",
   },
   {
+    pagePath: "/event/mangakenkyukai",
+    description: "企画｜漫画研究会",
+  },
+  {
     pagePath: "/company",
     description: "協賛企業一覧",
   },

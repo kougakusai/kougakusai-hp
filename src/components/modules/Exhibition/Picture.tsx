@@ -9,30 +9,24 @@ type Props = {
   avail?: boolean;
 };
 
-const printExp = (cardName: string) =>
-  `ネットプリントサービスを利用して、セブンイレブンで「${cardName}」のポストカードを印刷することができます。詳しくは、netprintのページでご確認ください。\n印刷コード[0000]`;
+const printExp = (cardName: string, printCode: string | undefined) =>
+  `ネットプリントサービスを利用して、セブンイレブンで「${cardName}」のポストカードを印刷することができます。詳しくは、netprintのページでご確認ください。\n\n「${cardName}」印刷コード：[${printCode}]\n\nnetprintの説明ページを開きますか？`;
 
-const netPrintUrl = "#";
+const netPrintUrl = "https://www.printing.ne.jp/support/lite/guide/step2.html";
 
 const Picture: VFC<Props> = (props) => {
   const pingAnimation = (
-    <span
-      className={clsx(
-        "flex w-4 h-4 justify-center items-center float-right relative",
-        { hidden: !(props.postcard && props.avail) }
-      )}
-    >
+    <span className="flex w-4 h-4 justify-center items-center float-right relative">
       <span className="animate-ping bg-k-pink inline-flex w-4 h-4 rounded-full opacity-50 absolute" />
       <span className="animate-none bg-k-pink inline-flex w-3 h-3 rounded-full opacity-75 relative" />
     </span>
   );
 
-  // if (props.postcard && props.avail) {
   return (
-    <div className="space-y-4 p-4 k-lg:p-16">
+    <div className="space-y-4 p-8 k-lg:p-16">
       <h3 className="flex text-[2rem]">
         {props.title}
-        {pingAnimation}
+        {props.postcard && props.avail && pingAnimation}
       </h3>
       <img
         src={props.src}
@@ -50,7 +44,9 @@ const Picture: VFC<Props> = (props) => {
             { hidden: !props.postcard }
           )}
           onClick={() => {
-            const jump: boolean = confirm(printExp(props.title));
+            const jump: boolean = confirm(
+              printExp(props.title, props.postcard)
+            );
             if (jump) {
               window.open(netPrintUrl, "_blank", "noreferrer");
             }
@@ -66,31 +62,6 @@ const Picture: VFC<Props> = (props) => {
       </div>
     </div>
   );
-  // } else if (props.postcard && !props.avail) {
-  //   return (
-  //     <div className="space-y-2">
-  //       <h3 className="flex text-[2rem]">{props.title}</h3>
-  //       <img src={props.src} alt={props.title} />
-  //       <div className="space-x-2">
-  //         <button
-  //           className="disabled:opacity-75 disabled:grayscale disabled:animate-none animate-pulse text-white bg-k-pink rounded-md"
-  //           disabled
-  //         >
-  //           ポストカードの印刷は終了しました
-  //         </button>
-  //         <span className="float-right">P.N. {props.author}</span>
-  //       </div>
-  //     </div>
-  //   );
-  // } else {
-  //   return (
-  //     <div className="space-y-2">
-  //       <h3 className="flex text-[2rem]">{props.title}</h3>
-  //       <img src={props.src} alt={props.title} className="drop-shadow" />
-  //       <span className="float-right">P.N. {props.author}</span>
-  //     </div>
-  //   );
-  // }
 };
 
 export default Picture;
