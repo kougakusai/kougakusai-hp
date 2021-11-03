@@ -7,7 +7,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="./samu.svg" />
           <meta
-            content="茨城大学の工学部による学園祭、こうがく祭の2020年度版公式ホームページです。今年は11月7日にオンラインで開催されます。こうがく祭についての情報を発信していきます。"
+            content="茨城大学の工学部による学園祭、こうがく祭の2021年度版公式ホームページです。今年は11月6日にオンラインで開催されます。こうがく祭についての情報を発信していきます。"
             name="description"
           />
           <meta charSet="utf-8" />
@@ -15,19 +15,19 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
-            content=" 2020年こうがく祭公式HPのトップページ"
+            content=" 2021年こうがく祭公式HPのトップページ"
           />
           <meta
             property="og:description"
-            content=" 茨城大学の工学部による学園祭、こうがく祭の2020年度版公式ホームページです。今年は11月7日にオンラインで開催されます。"
+            content=" 茨城大学の工学部による学園祭、こうがく祭の2021年度版公式ホームページです。今年は11月6日にオンラインで開催されます。"
           />
           <meta
             property="og:site_name"
-            content="2020年こうがく祭公式HP|茨城大学"
+            content="2021年こうがく祭公式HP|茨城大学"
           />
           <meta
             property="og:image"
-            content="https://kougakusai.github.io/kougakusai-hp/og.png/"
+            content="https://kougakusai.github.io/kougakusai-hp/og.png" // TODO 画像内の日付更新
           />
         </Head>
         <body>

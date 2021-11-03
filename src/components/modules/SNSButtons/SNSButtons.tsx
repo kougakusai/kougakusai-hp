@@ -1,27 +1,30 @@
 import type { VFC } from "react";
 import clsx from "clsx";
+import TwitterIcon from "./Twitter";
+import InstagramIcon from "./Instagram";
+import NoteIcon from "./Note";
 
 type Props = {
   className?: string;
 };
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const iconSize = " w-[32px] h-[32px] m-auto";
 
 const accounts = [
   {
     title: "Twitter",
     url: "https://twitter.com/kougakufes",
-    imagePath: "/twitter.svg",
+    icon: <TwitterIcon className={iconSize} />,
   },
   {
     title: "Instagram",
     url: "https://www.instagram.com/kougakufes/",
-    imagePath: "/instagram.png",
+    icon: <InstagramIcon className={iconSize} />,
   },
   {
     title: "note",
     url: "https://note.com/mtea/m/m4e45de2664ba/",
-    imagePath: "/note.svg",
+    icon: <NoteIcon className={iconSize} />,
   },
 ];
 
@@ -30,7 +33,7 @@ const SNSButtons: VFC<Props> = (props) => {
     <div className={clsx("text-white", props.className)}>
       <p className="mb-[10px] k-lg:mb-[15px]">FOLLOW US</p>
       <ul className="flex flex-wrap">
-        {accounts.map(({ title, url, imagePath }) => {
+        {accounts.map(({ title, url, icon }) => {
           return (
             <li key={title} className="flex">
               <a
@@ -38,8 +41,9 @@ const SNSButtons: VFC<Props> = (props) => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-[44px] h-[44px] p-[6px] "
               >
-                <img src={prefix + imagePath} alt={title} width="44px" />
+                {icon}
               </a>
             </li>
           );
