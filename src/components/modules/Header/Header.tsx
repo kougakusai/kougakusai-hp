@@ -41,12 +41,12 @@ const Header: VFC = () => {
           />
         </div>
         <div className="w-full px-[15%] py-[10px]">
-          <div className="flex justify-between text-white text-center">
+          <div className="flex justify-between text-2xl text-white text-center">
             <div>
               <Link href="/">
                 <a onClick={() => setIsExpand(false)} className="w-[44px]">
                   <img src={`${prefix}/home.svg`} alt="TOPへ" width="44px" />
-                  <span>Home</span>
+                  <span>Top</span>
                 </a>
               </Link>
             </div>
