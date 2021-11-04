@@ -8,8 +8,7 @@ import SocialLinks from "src/components/modules/Exhibition/SocialLinks";
 
 const expireDate = "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
 
-const isAvail =
-  new Date().getTime() <= new Date(expireDate).getTime() ? true : false;
+const isAvail = new Date().getTime() <= new Date(expireDate).getTime();
 
 const info = {
   name: "漫画研究会",
