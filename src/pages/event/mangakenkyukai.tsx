@@ -15,9 +15,7 @@ const info = {
   name: "漫画研究会",
   nameen: "IUCA",
   link: {
-    //TODO
-    hp: "#",
-    twitter: "#",
+    twitter: "https://twitter.com/iuca_unofficial",
   },
   introduction: "茨城大学漫画研究会の作品展示です。",
   pcexp: (
@@ -92,14 +90,10 @@ export default function Mangakenkyukai() {
         <section className="flex-col text-[1.5rem] k-lg:text-[1.8rem] p-4">
           <Subtitle text={`${info.name}展示`} />
           <div>
-            {/* <div className="border-2 text-center float-right">
-              <span>{info.name}リンク</span>
-              <SocialLinks
-                name={info.name}
-                hp={info.link.hp}
-                twitter={info.link.twitter}
-              />
-            </div> */}
+            <div className="text-center float-right">
+              {/* <span>{info.name}</span> */}
+              <SocialLinks name={info.name} twitter={info.link.twitter} />
+            </div>
             <p>{info.introduction}</p>
             <br />
             <p>{isAvail && info.pcexp}</p>

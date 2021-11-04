@@ -22,12 +22,12 @@ const SocialLinks: VFC<Props> = (props) => {
     {
       title: `${props.name}のTwitter`,
       url: props.twitter,
-      icon: <TwitterIcon className="w-[32px] h-[32px] m-auto text-[#1D9BF0]" />,
+      icon: <TwitterIcon className="w-16 h-16 m-auto text-[#1D9BF0]" />,
     },
     {
       title: `${props.name}のInstagram`,
       url: props.instagram,
-      icon: <InstagramIcon className="w-[32px] h-[32px] m-auto" />,
+      icon: <InstagramIcon className="w-16 h-16 m-auto" />,
     },
   ];
 
@@ -35,17 +35,17 @@ const SocialLinks: VFC<Props> = (props) => {
     <ul
       className={clsx(
         props.className,
-        "flex flex-wrap justify-evenly text-black"
+        "flex flex-wrap justify-evenly mb-4 mx-4 text-black"
       )}
     >
       {accounts.map(({ title, url, icon }) => {
         return (
           url && (
-            <li key={title} className="flex w-[44px]">
+            <li key={title} className="flex w-16">
               <a
                 title={title}
                 href={url}
-                className="text-[20px] w-[44px] p-[6px] underline text-k-blue-dark text-center align-middle"
+                className="text-[20px] w-full underline text-k-blue-dark text-center align-middle"
                 target="_blank"
                 rel="noopener noreferrer"
               >
