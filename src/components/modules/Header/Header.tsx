@@ -51,7 +51,7 @@ const Header: VFC = () => {
               </Link>
             </div>
             <div>
-              <Link href="/event">
+              <Link href="/event/mangakenkyukai">
                 <a onClick={() => setIsExpand(false)} className="w-[44px]">
                   <img
                     src={`${prefix}/event.svg`}
