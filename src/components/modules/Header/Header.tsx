@@ -2,6 +2,7 @@ import type { VFC } from "react";
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";
+import Logo from "../logo";
 import MenuButton from "./MenuButton";
 import SNSButtons from "../SNSButtons/SNSButtons";
 
@@ -59,12 +60,8 @@ const Header: VFC = () => {
         )}
       >
         <Link href="/">
-          <a>
-            <img
-              src={`${prefix}/logoWhite.svg`}
-              alt="こうがく祭"
-              className="hidden k-lg:block w-full"
-            />
+          <a title="こうがく祭">
+            <Logo className="hidden k-lg:block w-full" />
           </a>
         </Link>
         <ul className="w-full px-[55px] pt-[25px] pb-[60px] k-lg:p-0">
