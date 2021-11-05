@@ -6,7 +6,7 @@ import Subtitle from "src/components/modules/Subtitle";
 import Picture from "src/components/modules/Exhibition/Picture";
 import SocialLinks from "src/components/modules/Exhibition/SocialLinks";
 
-const expireDate = "11月0*日()**:**";
+const expireDate = "11月06日(土)";
 // "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
 
 const isAvail = true;
@@ -35,8 +35,8 @@ const info = {
       <br />
       印刷料は60円になります。
       <br />
-      {/* <br />
-      印刷コードの有効期限は{expireDate}までです。 */}
+      <br />
+      印刷コードの有効期限は{expireDate}までです。
       <br />
     </>
   ),
@@ -44,40 +44,34 @@ const info = {
   contents: [
     {
       title: "勝利の鼓動",
-      picPath:
-        "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
+      picPath: "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
       pn: "飛燕",
     },
     {
       title: "四年間のあとがき",
-      picPath:
-        "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
+      picPath: "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
       pn: "植物好きの人",
     },
     {
       title: "対空番長",
-      picPath:
-        "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
+      picPath: "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
       pn: "arutoron",
     },
     {
       title: "躍動トリオ",
-      picPath:
-        "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
+      picPath: "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
       pn: "抹茶ソーダ",
     },
     {
       title: "Tell Your World",
-      picPath:
-        "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
+      picPath: "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
       pn: "メイユー",
       pcCode: "59Y2LRZU",
       isAvail: isAvail,
     },
     {
       title: "鳴神",
-      picPath:
-        "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
+      picPath: "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
       pn: "光",
       pcCode: "45Q488QK",
       isAvail: isAvail,
@@ -122,16 +116,7 @@ export default function Mangakenkyukai() {
         <hr className="border-2 mt-8 mb-16" />
         <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
           {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
-            return (
-              <Picture
-                title={title}
-                src={picPath}
-                author={pn}
-                postcard={pcCode}
-                avail={isAvail}
-                key={title}
-              />
-            );
+            return <Picture title={title} src={picPath} author={pn} postcard={pcCode} avail={isAvail} key={title} />;
           })}
         </section>
       </article>
@@ -141,10 +126,7 @@ export default function Mangakenkyukai() {
 
 Mangakenkyukai.getLayout = function getLayout(page: ReactElement) {
   return (
-    <ArticleLayout
-      titleJa={`企画｜${info.name}`}
-      titleEn={`Event | ${info.nameen}`}
-    >
+    <ArticleLayout titleJa={`企画｜${info.name}`} titleEn={`Event | ${info.nameen}`}>
       {page}
     </ArticleLayout>
   );
