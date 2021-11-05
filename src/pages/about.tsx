@@ -1,6 +1,6 @@
-import type { ReactElement } from "react";
-import Head from "next/head";
-import ArticleLayout from "src/components/templates/ArticleLayout";
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
 
 export default function About() {
   return (

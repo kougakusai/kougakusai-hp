@@ -1,32 +1,32 @@
-import { ReactElement } from "react";
-import Head from "next/head";
-import ArticleLayout from "src/components/templates/ArticleLayout";
-import Subtitle from "src/components/modules/Subtitle";
+import { ReactElement } from 'react';
+import Head from 'next/head';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
+import Subtitle from 'src/components/modules/Subtitle';
 
 const contacts = [
   {
-    type: "メール",
-    name: "メールアドレス",
-    text: "kougakusai.1107@gmail.com",
-    link: "mailto:kougakusai.1107@gmail.com",
+    type: 'メール',
+    name: 'メールアドレス',
+    text: 'kougakusai.1107@gmail.com',
+    link: 'mailto:kougakusai.1107@gmail.com',
   },
   {
-    type: "Twitter",
-    name: "Twitter(DM)",
-    text: "@kougakufes",
-    link: "https://twitter.com/kougakufes/", //DMLink="https://twitter.com/messages/compose?recipient_id=User_ID"
+    type: 'Twitter',
+    name: 'Twitter(DM)',
+    text: '@kougakufes',
+    link: 'https://twitter.com/kougakufes/', //DMLink="https://twitter.com/messages/compose?recipient_id=User_ID"
   },
   {
-    type: "Instagram",
-    name: "Instagram(DM)",
-    text: "kougakufes",
-    link: "https://www.instagram.com/kougakufes/",
+    type: 'Instagram',
+    name: 'Instagram(DM)',
+    text: 'kougakufes',
+    link: 'https://www.instagram.com/kougakufes/',
   },
   {
-    type: "匿名質問箱(Peing)",
-    name: "匿名質問箱",
-    text: "kougakufes",
-    link: "https://peing.net/ja/kougakufes/",
+    type: '匿名質問箱(Peing)',
+    name: '匿名質問箱',
+    text: 'kougakufes',
+    link: 'https://peing.net/ja/kougakufes/',
   },
 ];
 
@@ -37,9 +37,7 @@ const Contact = () => {
         <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
       <article className="text-[1.5rem] k-lg:text-[1.8rem] relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
-        <p className="p-2">
-          質問等があれば下記連絡先へお気軽にお問い合わせください。
-        </p>
+        <p className="p-2">質問等があれば下記連絡先へお気軽にお問い合わせください。</p>
         <br />
         <div className="space-y-[50px]">
           {contacts.map(({ type, name, text, link }) => {
@@ -48,11 +46,9 @@ const Contact = () => {
                 <Subtitle text={name} />
                 <a
                   onClick={() => {
-                    const jump: boolean = confirm(
-                      `${type}でこうがく祭へ連絡を取りますか？\n（${type}を開きます。）`
-                    );
+                    const jump: boolean = confirm(`${type}でこうがく祭へ連絡を取りますか？\n（${type}を開きます。）`);
                     if (jump) {
-                      window.open(`${link}`, "_blank", "noreferrer");
+                      window.open(`${link}`, '_blank', 'noreferrer');
                     }
                     return false;
                   }}

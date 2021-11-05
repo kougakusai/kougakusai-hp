@@ -11,7 +11,10 @@ class MyDocument extends Document {
             name="description"
           />
           <meta charSet="utf-8" />
-          <meta property="og:url" content="https://kougakusai.jp/" />
+          <meta
+            property="og:url"
+            content="https://kougakusai.github.io/kougakusai-hp/"
+          />
           <meta property="og:type" content="website" />
           <meta
             property="og:title"
@@ -27,7 +30,7 @@ class MyDocument extends Document {
           />
           <meta
             property="og:image"
-            content="https://kougakusai.github.io/kougakusai-hp/og.png" // TODO 画像内の日付更新
+            content="https://kougakusai.github.io/kougakusai-hp/og.png"
           />
         </Head>
         <body>

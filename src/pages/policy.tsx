@@ -1,8 +1,8 @@
-import type { ReactElement } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import ArticleLayout from "src/components/templates/ArticleLayout";
-import Subtitle from "src/components/modules/Subtitle";
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
+import Subtitle from 'src/components/modules/Subtitle';
 
 export default function Policy() {
   return (
@@ -53,9 +53,7 @@ export default function Policy() {
           <li className="mb-[20px] list-disc text-[1.5rem] k-lg:text-[1.8rem]">
             誹謗中傷や信用失墜を意図する内容を含んだサイト
           </li>
-          <li className="mb-[20px] list-disc text-[1.5rem] k-lg:text-[1.8rem]">
-            アダルトコンテンツを含んだサイト
-          </li>
+          <li className="mb-[20px] list-disc text-[1.5rem] k-lg:text-[1.8rem]">アダルトコンテンツを含んだサイト</li>
           <li className="mb-[20px] list-disc text-[1.5rem] k-lg:text-[1.8rem]">
             公序良俗および社会倫理に反する内容を含んだサイト
           </li>

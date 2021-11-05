@@ -5,10 +5,10 @@ import Subtitle from "src/components/modules/Subtitle";
 
 const companies = [
   {
-    name: "アイ・イー・シー(株)",
+    name: "アイ・イー・シー株式会社",
     ruby: "あいいーしー",
-    url: "",
-    img: "https://drive.google.com/uc?id=1ah7B1OdoF2vT0ZgzlRrgZOajJtju6PoY",
+    url: "https://www.iecha.co.jp",
+    img: "https://drive.google.com/uc?id=1blq7EPCkdYSBVO7oBNs7RYuMxKVgabOS",
   },
   {
     name: "イガラシ綜業株式会社",
@@ -17,7 +17,7 @@ const companies = [
     img: "https://drive.google.com/uc?id=1L0vZ1DRx4g80ptHqLvmjVTFnv_1RtBkq",
   },
   {
-    name: "有)エイトプランニングオフィス",
+    name: "有限会社エイトプランニングオフィス",
     ruby: "えいとぷらんにんぐおふぃす",
     url: "",
     img: "https://drive.google.com/uc?id=1ReL-sxlkzO_xiQ-myIxMaN0i2ib0TcAh",
