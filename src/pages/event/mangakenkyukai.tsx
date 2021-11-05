@@ -19,7 +19,7 @@ const info = {
   introduction: "茨城大学漫画研究会の作品展示です。",
   pcexp: (
     <>
-      印刷コードが表示されている作品については、セブンイレブンにおいてネットプリントサービスからポストカードへ印刷することができます。詳しくは
+      各印刷コードでセブンイレブンにおいてネットプリントサービスからポストカードへ印刷することができます。 詳しくは
       <a
         href="https://www.printing.ne.jp/support/lite/guide/step2.html"
         className="text-k-blue-dark underline"
@@ -30,49 +30,45 @@ const info = {
       </a>
       をご覧ください。
       <br />
+      印刷コードは11/6日に公開予定です。
+      <br />
     </>
   ),
 
   contents: [
     {
       title: "勝利の鼓動",
-      picPath:
-        "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
+      picPath: "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
       pn: "飛燕",
     },
     {
       title: "四年間のあとがき",
-      picPath:
-        "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
+      picPath: "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
       pn: "植物好きの人",
     },
     {
       title: "対空番長",
-      picPath:
-        "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
+      picPath: "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
       pn: "arutoron",
     },
     {
       title: "躍動トリオ",
-      picPath:
-        "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
+      picPath: "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
       pn: "抹茶ソーダ",
     },
     {
       title: "Tell Your World",
-      picPath:
-        "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
+      picPath: "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
       pn: "メイユー",
-      pcCode: "TBA",
-      isAvail: isAvail,
+      // pcCode: "TBA",
+      // isAvail: isAvail,
     },
     {
       title: "鳴神",
-      picPath:
-        "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
+      picPath: "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
       pn: "光",
-      pcCode: "TBA",
-      isAvail: isAvail,
+      // pcCode: "TBA",
+      // isAvail: isAvail,
     },
   ],
 };
@@ -87,12 +83,14 @@ export default function Mangakenkyukai() {
       </Head>
       <article className="relative text-[1.5rem] k-lg:text-[1.8rem] top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
         <section className="flex-col text-[1.5rem] k-lg:text-[1.8rem] p-4">
-          <Subtitle text={`${info.name}展示`} />
-          <div>
+          <div className="flex">
+            <Subtitle text={`${info.name}展示`} />
             <div className="text-center float-right">
               {/* <span>{info.name}</span> */}
               <SocialLinks name={info.name} twitter={info.link.twitter} />
             </div>
+          </div>
+          <div>
             <p>{info.introduction}</p>
             <br />
             <p>{isAvail && info.pcexp}</p>
@@ -100,7 +98,7 @@ export default function Mangakenkyukai() {
           <br />
           {isAvail && (
             <span>
-              ポストカード印刷有効期限：TBA {/*TODO*/}
+              {/* ポストカード印刷有効期限：TBA TODO */}
               {/* {new Date(expireDate).getMonth()}月
               {new Date(expireDate).getDate()}日（
               {weekDaysKs[new Date(expireDate).getDay()]}）
@@ -111,19 +109,15 @@ export default function Mangakenkyukai() {
         </section>
         <hr className="border-2 my-16" />
         <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
-          {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
-            return (
-              <Picture
-                title={title}
-                src={picPath}
-                author={pn}
-                postcard={pcCode}
-                avail={isAvail}
-                key={title}
-              />
-            );
+          {info.contents.map(({ title, picPath, pn }) => {
+            return <Picture title={title} src={picPath} author={pn} key={title} />;
           })}
         </section>
+        {/* <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
+          {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
+            return <Picture title={title} src={picPath} author={pn} postcard={pcCode} avail={isAvail} key={title} />;
+          })}
+        </section> */}
       </article>
     </>
   );
@@ -131,10 +125,7 @@ export default function Mangakenkyukai() {
 
 Mangakenkyukai.getLayout = function getLayout(page: ReactElement) {
   return (
-    <ArticleLayout
-      titleJa={`企画｜${info.name}`}
-      titleEn={`Event | ${info.nameen}`}
-    >
+    <ArticleLayout titleJa={`企画｜${info.name}`} titleEn={`Event | ${info.nameen}`}>
       {page}
     </ArticleLayout>
   );
