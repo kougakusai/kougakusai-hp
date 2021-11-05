@@ -6,9 +6,10 @@ import Subtitle from "src/components/modules/Subtitle";
 import Picture from "src/components/modules/Exhibition/Picture";
 import SocialLinks from "src/components/modules/Exhibition/SocialLinks";
 
-const expireDate = "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
+// const expireDate = "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
 
-const isAvail = new Date().getTime() <= new Date(expireDate).getTime();
+const isAvail = true;
+// new Date().getTime() <= new Date(expireDate).getTime();
 
 const info = {
   name: "漫画研究会",
@@ -19,7 +20,8 @@ const info = {
   introduction: "茨城大学漫画研究会の作品展示です。",
   pcexp: (
     <>
-      各印刷コードでセブンイレブンにおいてネットプリントサービスからポストカードへ印刷することができます。 詳しくは
+      各印刷コードでセブンイレブンにおいてネットプリントサービスからポストカードへ印刷することができます。
+      詳しくは
       <a
         href="https://www.printing.ne.jp/support/lite/guide/step2.html"
         className="text-k-blue-dark underline"
@@ -30,45 +32,54 @@ const info = {
       </a>
       をご覧ください。
       <br />
-      印刷コードは11月6日に公開予定です。
+      印刷料は60円になります。
       <br />
+      {/* TODO 印刷コード有効期限
+      印刷コードの有効期限は11月0*日()**:**までです。
+      <br /> */}
     </>
   ),
 
   contents: [
     {
       title: "勝利の鼓動",
-      picPath: "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
+      picPath:
+        "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
       pn: "飛燕",
     },
     {
       title: "四年間のあとがき",
-      picPath: "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
+      picPath:
+        "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
       pn: "植物好きの人",
     },
     {
       title: "対空番長",
-      picPath: "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
+      picPath:
+        "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
       pn: "arutoron",
     },
     {
       title: "躍動トリオ",
-      picPath: "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
+      picPath:
+        "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
       pn: "抹茶ソーダ",
     },
     {
       title: "Tell Your World",
-      picPath: "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
+      picPath:
+        "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
       pn: "メイユー",
-      // pcCode: "TBA",
-      // isAvail: isAvail,
+      pcCode: "59Y2LRZU",
+      isAvail: isAvail,
     },
     {
       title: "鳴神",
-      picPath: "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
+      picPath:
+        "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
       pn: "光",
-      // pcCode: "TBA",
-      // isAvail: isAvail,
+      pcCode: "45Q488QK",
+      isAvail: isAvail,
     },
   ],
 };
@@ -109,15 +120,19 @@ export default function Mangakenkyukai() {
         </section>
         <hr className="border-2 my-16" />
         <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
-          {info.contents.map(({ title, picPath, pn }) => {
-            return <Picture title={title} src={picPath} author={pn} key={title} />;
+          {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
+            return (
+              <Picture
+                title={title}
+                src={picPath}
+                author={pn}
+                postcard={pcCode}
+                avail={isAvail}
+                key={title}
+              />
+            );
           })}
         </section>
-        {/* <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
-          {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
-            return <Picture title={title} src={picPath} author={pn} postcard={pcCode} avail={isAvail} key={title} />;
-          })}
-        </section> */}
       </article>
     </>
   );
@@ -125,7 +140,10 @@ export default function Mangakenkyukai() {
 
 Mangakenkyukai.getLayout = function getLayout(page: ReactElement) {
   return (
-    <ArticleLayout titleJa={`企画｜${info.name}`} titleEn={`Event | ${info.nameen}`}>
+    <ArticleLayout
+      titleJa={`企画｜${info.name}`}
+      titleEn={`Event | ${info.nameen}`}
+    >
       {page}
     </ArticleLayout>
   );
