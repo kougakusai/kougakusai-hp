@@ -9,16 +9,13 @@ const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const announcement = [
   {
-    date: "11月06日",
-    detail: "こうがく祭開催予定",
+    date: "11月05日",
+    detail: "企画ページを公開しました。",
   },
+
   {
     date: "10月26日",
     detail: "2021年度版HPを公開しました。",
-  },
-  {
-    date: "11月05日",
-    detail: "企画ページを公開しました。",
   },
 ];
 
