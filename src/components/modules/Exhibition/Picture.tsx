@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import type { VFC } from "react";
+import ImgModal from "./ImgModal";
 
 type Props = {
   title: string;
@@ -28,15 +29,11 @@ const Picture: VFC<Props> = (props) => {
         {props.title}
         {props.postcard && props.avail && pingAnimation}
       </h3>
-      <img
-        src={props.src}
-        alt={props.title}
-        className="w-full drop-shadow-lg"
-      />
+      <ImgModal src={props.src} alt={props.title} />
       <div>
         <button
           className={clsx(
-            "text-white bg-k-pink rounded-md",
+            "text-white bg-k-pink rounded-md px-6",
             {
               "disabled:opacity-75 disabled:grayscale disabled:animate-none disabled:cursor-default":
                 props.postcard && !props.avail,
