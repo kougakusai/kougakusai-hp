@@ -45,12 +45,28 @@ const Header: VFC = () => {
           />
         </div>
         <div className="w-full px-[15%] py-[10px]">
-          <div className="w-[44px]">
-            <Link href="/">
-              <a onClick={() => setIsExpand(false)}>
-                <img src={`${prefix}/home.svg`} alt="TOPへ" width="44px" />
-              </a>
-            </Link>
+          <div className="flex justify-between text-2xl text-white text-center">
+            <div>
+              <Link href="/">
+                <a onClick={() => setIsExpand(false)} className="w-[44px]">
+                  <img src={`${prefix}/home.svg`} alt="TOPへ" width="44px" />
+                  <span>Top</span>
+                </a>
+              </Link>
+            </div>
+            <div>
+              <Link href="/event/mangakenkyukai">
+                <a onClick={() => setIsExpand(false)} className="w-[44px]">
+                  <img
+                    src={`${prefix}/event.svg`}
+                    alt="企画ページへ"
+                    width="44px"
+                    height="44px"
+                  />
+                  <span>Event</span>
+                </a>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
