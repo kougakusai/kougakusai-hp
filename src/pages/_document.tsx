@@ -16,14 +16,14 @@ class MyDocument extends Document {
             content="https://kougakusai.github.io/kougakusai-hp/"
           />
           <meta property="og:type" content="website" />
-          <meta property="og" content=" 2021年こうがく祭公式HPのトップページ" />
+          <meta property="og:title" content="2021年こうがく祭公式HP" />
           <meta
             property="og:description"
-            content=" 茨城大学の工学部による学園祭、こうがく祭の2021年度版公式ホームページです。今年は11月6日にオンラインで開催されます。"
+            content="茨城大学の工学部による学園祭、こうがく祭の2021年度版公式ホームページです。今年は11月6日にオンラインで開催されます。"
           />
           <meta
             property="og:site_name"
-            content="2021年こうがく祭公式HP|茨城大学"
+            content="2021年こうがく祭公式HP | 茨城大学"
           />
           <meta
             property="og:image"
