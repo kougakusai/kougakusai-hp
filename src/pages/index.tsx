@@ -100,6 +100,23 @@ export default function Home() {
               })}
             </table>
           </section>
+          <section>
+            <Subtitle text="茨城大学工学部公式Instagram" />
+            <p>茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。</p>
+            <a
+              href="https://instagram.com/ibarakiuniversityhitachi?utm_medium=copy_link"
+              className="block pt-3 pt-2 underline text-k-blue-dark cursor-pointer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              茨城大学公式Instagram
+            </a>
+            <img
+              src={`${prefix}/instagram.png`}
+              alt="茨城大学工学部公式InstagramQRコード"
+              className="text-center w-3/5 sm:w-[250px] lg:w-[250px]"
+            />
+          </section>
         </article>
       </main>
     </>
