@@ -112,7 +112,7 @@ export default function Home() {
               茨城大学公式Instagram
             </a>
             <img
-              src={`${prefix}/instagram.png`}
+              src={`${prefix}/Instagram.png`}
               alt="茨城大学工学部公式InstagramQRコード"
               className="text-center w-3/5 sm:w-[250px] lg:w-[250px]"
             />
