@@ -6,7 +6,8 @@ import Subtitle from "src/components/modules/Subtitle";
 import Picture from "src/components/modules/Exhibition/Picture";
 import SocialLinks from "src/components/modules/Exhibition/SocialLinks";
 
-// const expireDate = "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
+const expireDate = "11月0*日()**:**";
+// "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
 
 const isAvail = true;
 // new Date().getTime() <= new Date(expireDate).getTime();
@@ -20,7 +21,7 @@ const info = {
   introduction: "茨城大学漫画研究会の作品展示です。",
   pcexp: (
     <>
-      各印刷コードでセブンイレブンにおいてネットプリントサービスからポストカードへ印刷することができます。
+      印刷コードが表示されているものはセブンイレブンにおいて、ネットプリントサービスからポストカードへ印刷することができます。
       詳しくは
       <a
         href="https://www.printing.ne.jp/support/lite/guide/step2.html"
@@ -34,9 +35,9 @@ const info = {
       <br />
       印刷料は60円になります。
       <br />
-      {/* TODO 印刷コード有効期限
-      印刷コードの有効期限は11月0*日()**:**までです。
-      <br /> */}
+      {/* <br />
+      印刷コードの有効期限は{expireDate}までです。 */}
+      <br />
     </>
   ),
 
@@ -106,19 +107,19 @@ export default function Mangakenkyukai() {
             <br />
             <p>{isAvail && info.pcexp}</p>
           </div>
-          <br />
+          {/* (<br />
           {isAvail && (
             <span>
-              {/* ポストカード印刷有効期限：TBA TODO */}
-              {/* {new Date(expireDate).getMonth()}月
+              {/* ポストカード印刷有効期限：{expireDate} */}
+          {/* {new Date(expireDate).getMonth()}月
               {new Date(expireDate).getDate()}日（
               {weekDaysKs[new Date(expireDate).getDay()]}）
               {new Date(expireDate).getHours()}時
               {new Date(expireDate).getMinutes()}分 迄 */}
-            </span>
-          )}
+          {/*</span>
+          ) */}
         </section>
-        <hr className="border-2 my-16" />
+        <hr className="border-2 mt-8 mb-16" />
         <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
           {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
             return (
