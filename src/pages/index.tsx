@@ -94,16 +94,16 @@ export default function Home() {
           </section>
           <section>
             <Subtitle text="お知らせ" />
-            <ul>
+            <table>
               {announcement.map(({ date, detail }) => {
                 return (
-                  <li className="h-[38px] leading-[38px]" key={date}>
-                    <span className="w-[150px] mr-[30px]">{date}</span>
-                    <span>{detail}</span>
-                  </li>
+                  <tr key={date} className="align-text-top leading-[28px]">
+                    <td className="whitespace-nowrap pr-[30px]">{date}</td>
+                    <td className="pb-[10px]">{detail}</td>
+                  </tr>
                 );
               })}
-            </ul>
+            </table>
           </section>
         </article>
       </main>
