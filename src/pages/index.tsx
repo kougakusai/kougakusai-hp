@@ -33,7 +33,7 @@ const headline = (
     <br />
     <div>
       <a
-        href="#"
+        href="https://youtu.be/R0o8vr7dHRk"
         className="inline-flex items-top px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg"
       >
         <svg
@@ -83,11 +83,7 @@ export default function Home() {
             "k-lg:top-[5vh] k-lg:left-[calc(50%-13vw)] m-auto"
           )}
         >
-          <img
-            src={`${prefix}/title.png`}
-            alt="こうがく祭"
-            className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
-          />
+          <img src={`${prefix}/title.png`} alt="こうがく祭" className="w-full k-sm:w-[58vw] k-lg:w-[40vw]" />
           {headline}
         </h1>
         <article
@@ -105,9 +101,7 @@ export default function Home() {
             <p>
               今年度はオンラインでの開催となりました。詳しくは
               <Link href="/about">
-                <a className="underline text-k-blue-dark cursor-pointer">
-                  オンライン開催について
-                </a>
+                <a className="underline text-k-blue-dark cursor-pointer">オンライン開催について</a>
               </Link>
               をご覧ください。
             </p>
