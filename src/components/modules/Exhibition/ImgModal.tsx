@@ -1,4 +1,4 @@
-import { useState, VFC } from "react";
+import { useReducer, useState, VFC } from "react";
 import clsx from "clsx";
 
 type Props = {
@@ -8,12 +8,9 @@ type Props = {
 };
 
 const ImgModal: VFC<Props> = (props) => {
-  const [isOpen, setOpen] = useState(false);
-  const toggleOpen = () => {
-    setOpen((prev) => !prev);
-  };
+  const [isOpen, toggleIsOpen] = useReducer((isOpen) => !isOpen, false);
   return (
-    <button onClick={toggleOpen}>
+    <button onClick={toggleIsOpen}>
       <img src={props.src} alt={props.alt} className="w-full drop-shadow-lg" />
       {isOpen && (
         <div

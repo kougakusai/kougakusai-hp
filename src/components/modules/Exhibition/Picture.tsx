@@ -33,7 +33,7 @@ const Picture: VFC<Props> = (props) => {
       <div>
         <button
           className={clsx(
-            "text-white bg-k-pink rounded-md",
+            "text-white bg-k-pink rounded-md px-6",
             {
               "disabled:opacity-75 disabled:grayscale disabled:animate-none disabled:cursor-default":
                 props.postcard && !props.avail,
