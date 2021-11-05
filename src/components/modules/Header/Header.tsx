@@ -57,12 +57,7 @@ const Header: VFC = () => {
             <div>
               <Link href="/event/mangakenkyukai">
                 <a onClick={() => setIsExpand(false)} className="w-[44px]">
-                  <img
-                    src={`${prefix}/event.svg`}
-                    alt="企画ページへ"
-                    width="44px"
-                    height="44px"
-                  />
+                  <img src={`${prefix}/event.svg`} alt="企画ページへ" width="44px" height="44px" />
                   <span>Event</span>
                 </a>
               </Link>
@@ -80,11 +75,7 @@ const Header: VFC = () => {
       >
         <Link href="/">
           <a>
-            <img
-              src={`${prefix}/logoWhite.svg`}
-              alt="こうがく祭"
-              className="hidden k-lg:block w-full"
-            />
+            <img src={`${prefix}/logoWhite.svg`} alt="こうがく祭" className="hidden k-lg:block w-full" />
           </a>
         </Link>
         <ul className="w-full px-[55px] pt-[25px] pb-[60px] k-lg:p-0">
@@ -109,7 +100,7 @@ const Header: VFC = () => {
             );
           })}
         </ul>
-        <SNSButtons className="hidden k-lg:block pt-[60px]" />
+        <SNSButtons className="hidden k-lg:block pt-[30px]" />
       </nav>
     </header>
   );
