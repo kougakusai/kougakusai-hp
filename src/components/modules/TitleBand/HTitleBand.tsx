@@ -16,7 +16,7 @@ const HTitleBand: VFC<Props> = (props) => {
         "k-lg:w-[calc(100%-20vw)] k-lg:h-[110px] k-lg:pl-[5%]",
         props.className
       )}
-      style={{ backgroundImage: "url('./rect.svg')" }}
+      style={{ backgroundImage: "url('/rect.svg')" }}
     >
       <img src={`${prefix}/decoration.svg`} className="w-[40px]" />
       <h2

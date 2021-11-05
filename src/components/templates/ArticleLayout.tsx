@@ -17,12 +17,9 @@ const ArticleLayout: VFC<Props> = (props) => {
   return (
     <>
       <Header />
-      <EventDay className="fixed top-0 right-0 z-20" />
-      <HTitleBand text={props.titleJa} className="fixed top-0 right-0 z-10" />
-      <VTitleBand
-        text={props.titleEn}
-        className="fixed right-0 top-[110px] hidden k-lg:block"
-      />
+      <EventDay className="absolute lg:fixed top-0 right-0 z-20" />
+      <HTitleBand text={props.titleJa} className="absolute top-0 right-0 z-10" />
+      <VTitleBand text={props.titleEn} className="fixed right-0 top-[110px] hidden k-lg:block" />
       <main
         className={clsx(
           "bg-white min-h-[calc(100vh-110px)]",

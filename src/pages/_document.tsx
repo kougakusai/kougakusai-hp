@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="icon" href="./samu.svg" />
+          <link rel="icon" href="/samu.svg" />
           <meta
             content="茨城大学の工学部による学園祭、こうがく祭の2021年度版公式ホームページです。今年は11月6日にオンラインで開催されます。こうがく祭についての情報を発信していきます。"
             name="description"
