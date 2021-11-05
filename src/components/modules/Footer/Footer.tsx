@@ -36,7 +36,7 @@ const Footer: VFC = () => {
       className={clsx(
         "k-lg:ml-auto w-full k-lg:w-[calc(100%-20vw)]",
         "bg-k-navy-black text-white text-[1.8rem]",
-        "px-[10%] pt-[10%] pb-[130px] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%]"
+        "px-[10%] pt-[10%] pb-[180px] k-lg:py-[5%] k-lg:pl-[7%] k-lg:pr-[20%] k-lg:pb-[130px]"
       )}
     >
       <div>
