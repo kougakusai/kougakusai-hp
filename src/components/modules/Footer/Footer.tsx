@@ -13,8 +13,8 @@ const links = [
     description: "オンライン開催について",
   },
   {
-    pagePath: "/event/mangakenkyukai",
-    description: "企画｜漫画研究会",
+    pagePath: "/event/show",
+    description: "企画一覧",
   },
   {
     pagePath: "/company",
