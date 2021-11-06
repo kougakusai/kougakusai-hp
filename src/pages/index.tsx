@@ -40,7 +40,7 @@ const headline = (
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw]"
+          className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw]　h-[2vw] k-sm:w-[6vw] k-lg:w-[4vw]"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
