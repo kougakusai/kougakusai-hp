@@ -4,24 +4,6 @@ import Link from "next/link";
 import ArticleLayout from "src/components/templates/ArticleLayout";
 import Subtitle from "src/components/modules/Subtitle";
 
-const contents = [
-  {
-    title: "茨城大学フォーミュラ",
-    description: "茨城大学フォーミュラの紹介動画です。",
-    url: "https://youtu.be/bOuJYDg2OCM",
-  },
-  {
-    title: "フォークソングクラブ",
-    description: "サンキューリリーバイバイリリーリーガルリリー",
-    url: "https://youtu.be/SoWmn0HM6F0",
-  },
-  {
-    title: "フォークソングクラブ",
-    description: "メールアドレス",
-    url: "https://youtu.be/A-xGCNqbOAo",
-  },
-];
-
 const Show = () => {
   return (
     <>
@@ -30,8 +12,11 @@ const Show = () => {
       </Head>
       <article className="text-[1.5rem] k-lg:text-[1.8rem] relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)] space-y-[50px]">
         <div>
-          <Subtitle text="茨城大学フォーミュラ" />
-          <p className="p-2">茨城大学フォーミュラの紹介動画です。</p>
+          <Subtitle text="Ibaraki University Racing" />
+          <p className="p-2">
+            Ibaraki University
+            Racing（茨城大学学生フォーミュラ部）の紹介動画です。
+          </p>
           <a
             href="https://youtu.be/bOuJYDg2OCM"
             target="_blank"
@@ -42,8 +27,8 @@ const Show = () => {
           </a>
         </div>
         <div>
-          <Subtitle text="フォークソングクラブ" />
-          <p className="p-2">フォークソングクラブの演奏動画です。</p>
+          <Subtitle text="Folk Song Club" />
+          <p className="p-2">Folk Song Clubの演奏動画です。</p>
           <br />
           <p className="p-2">サンキューリリーバイバイリリーリーガルリリー</p>
           <a
