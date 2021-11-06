@@ -34,13 +34,13 @@ const headline = (
     <div>
       <a
         href="https://youtu.be/R0o8vr7dHRk"
-        className="inline-flex items-top px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg"
+        className="inline-flex items-center px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg"
         target="_blank"
         rel="noopener noreferrer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw]　h-[2vw] k-sm:w-[6vw] k-lg:w-[4vw]"
+          className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw] h-[8vw] k-sm:h-[6vw] k-lg:h-[2.8vw]"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
