@@ -23,10 +23,9 @@ const EventDay: VFC<Props> = (props) => {
           )}
         >
           {/* ↓開催日表示テキスト:z-index=30 */}
-          <div className="z-30 k-lg:scale-[0.9] text-center translate-x-[5px] translate-y-[20px] text-[#94DD26] text-4xl font-medium slashed-zero brightness-125 saturate-200 glitch">
-            <p className="font-bold tracking-[0.8rem]">開催</p>
-            <p className="font-semibold tracking-[0.5rem]">2021</p>
-            <p>11.06</p>
+          <div className="z-30 k-lg:scale-[0.9] text-center translate-x-[5px] translate-y-[20px] text-[#94DD26] text-4xl font-bold slashed-zero brightness-125 saturate-200 glitch">
+            <p className="tracking-[0.8rem]">企画</p>
+            <p className="tracking-[0.8rem]">展示中</p>
           </div>
         </div>
         {/* ↓lime polygon:z-index=20 */}
