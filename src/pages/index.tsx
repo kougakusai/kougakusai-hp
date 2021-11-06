@@ -35,6 +35,8 @@ const headline = (
       <a
         href="https://youtu.be/R0o8vr7dHRk"
         className="inline-flex items-top px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
