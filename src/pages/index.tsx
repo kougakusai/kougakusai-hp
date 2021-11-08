@@ -9,13 +9,12 @@ const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const announcement = [
   {
+    date: "11月06日",
+    detail: "2021年度こうがく祭の配信が終了しました。",
+  },
+  {
     date: "11月05日",
     detail: "企画ページを公開しました。",
-  },
-
-  {
-    date: "10月26日",
-    detail: "2021年度版HPを公開しました。",
   },
 ];
 
@@ -40,10 +39,7 @@ const headline = (
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-
           className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw] h-[8vw] k-sm:h-[6vw] k-lg:h-[2.8vw]"
-
-
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -88,7 +84,11 @@ export default function Home() {
             "k-lg:top-[5vh] k-lg:left-[calc(50%-13vw)] m-auto"
           )}
         >
-          <img src={`${prefix}/title.png`} alt="こうがく祭" className="w-full k-sm:w-[58vw] k-lg:w-[40vw]" />
+          <img
+            src={`${prefix}/title.png`}
+            alt="こうがく祭"
+            className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
+          />
           {headline}
         </h1>
         <article
@@ -106,7 +106,9 @@ export default function Home() {
             <p>
               今年度はオンラインでの開催となりました。詳しくは
               <Link href="/about">
-                <a className="underline text-k-blue-dark cursor-pointer">オンライン開催について</a>
+                <a className="underline text-k-blue-dark cursor-pointer">
+                  オンライン開催について
+                </a>
               </Link>
               をご覧ください。
             </p>
@@ -126,7 +128,9 @@ export default function Home() {
           </section>
           <section>
             <Subtitle text="茨城大学工学部公式Instagram" />
-            <p>茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。</p>
+            <p>
+              茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。
+            </p>
             <a
               href="https://instagram.com/ibarakiuniversityhitachi?utm_medium=copy_link"
               className="block pt-3 pt-2 underline text-k-blue-dark cursor-pointer"
