@@ -6,11 +6,9 @@ import Subtitle from "src/components/modules/Subtitle";
 import Picture from "src/components/modules/Exhibition/Picture";
 import SocialLinks from "src/components/modules/Exhibition/SocialLinks";
 
-const expireDate = "11月06日(土)";
-// "2021-11-07T24:00:00+0900"; //ポストカード期限（yyyy-MM-DDTHH:mm:ss+0900） TODO
+// const expireDate = "11月06日(土)";
 
-const isAvail = true;
-// new Date().getTime() <= new Date(expireDate).getTime();
+const isAvail = false;
 
 const info = {
   name: "漫画研究会",
@@ -21,22 +19,7 @@ const info = {
   introduction: "茨城大学漫画研究会の作品展示です。",
   pcexp: (
     <>
-      印刷コードが表示されているものはセブンイレブンにおいて、ネットプリントサービスからポストカードへ印刷することができます。
-      詳しくは
-      <a
-        href="https://www.printing.ne.jp/support/lite/guide/step2.html"
-        className="text-k-blue-dark underline"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        公式ガイド
-      </a>
-      をご覧ください。
-      <br />
-      印刷料は60円になります。
-      <br />
-      <br />
-      印刷コードの有効期限は{expireDate}までです。
+      ポストカードへの印刷は終了しました。
       <br />
     </>
   ),
@@ -105,7 +88,7 @@ export default function Mangakenkyukai() {
           <div>
             <p>{info.introduction}</p>
             <br />
-            <p>{isAvail && info.pcexp}</p>
+            <p>{info.pcexp}</p>
           </div>
           {/* (<br />
           {isAvail && (
