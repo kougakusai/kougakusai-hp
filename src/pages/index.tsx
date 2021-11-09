@@ -22,35 +22,34 @@ const headline = (
   <span
     className={clsx(
       "mt-[-35%] k-sm:mt-[-25%] k-lg:mt-[-28%]",
-      "pl-[27vw] k-sm:pl-[8vw] k-lg:pl-[3vw]",
-      "k-lg:w-full float-left",
+      "pl-[22vw] k-sm:pl-[4vw] k-lg:pl-[2vw]",
+      "w-[90%] k-sm:w-[75%] k-lg:w-[70%] float-left",
       "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
       "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
     )}
   >
-    オンライン開催
+    2021年こうがく祭オンライン開催は終了しました。
+    <br />
+    企画のアーカイブを閲覧することができます。
     <br />
     <div>
-      <a
-        href="https://youtu.be/R0o8vr7dHRk"
-        className="inline-flex items-center px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw] h-[8vw] k-sm:h-[6vw] k-lg:h-[2.8vw]"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-            clipRule="evenodd"
-          />
-        </svg>
-        <span>配信を見る</span>
-      </a>
+      <Link href="event/show">
+        <a className="inline-flex items-center px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw] h-[8vw] k-sm:h-[6vw] k-lg:h-[2.8vw]"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span>企画を見る</span>
+        </a>
+      </Link>
     </div>
   </span>
 );
