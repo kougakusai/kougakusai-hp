@@ -22,15 +22,15 @@ const headline = (
   <span
     className={clsx(
       "mt-[-35%] k-sm:mt-[-25%] k-lg:mt-[-28%]",
-      "pl-[22vw] k-sm:pl-[4vw] k-lg:pl-[2vw]",
-      "w-[90%] k-sm:w-[75%] k-lg:w-[70%] float-left",
-      "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
-      "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+      "pl-[20vw] k-sm:pl-[0vw] k-lg:pl-[0vw]",
+      " float-left",
+      "text-[5vw] k-sm:text-[4.5vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
+      "text-yellow-200 brightness-125 blur-[0.8px] font-bold "
     )}
   >
-    2021年こうがく祭オンライン開催は終了しました。
+    2021年の開催は終了しました。
     <br />
-    企画のアーカイブを閲覧することができます。
+    企画のアーカイブ公開中!
     <br />
     <div>
       <Link href="event/show">
@@ -83,11 +83,7 @@ export default function Home() {
             "k-lg:top-[5vh] k-lg:left-[calc(50%-13vw)] m-auto"
           )}
         >
-          <img
-            src={`${prefix}/title.png`}
-            alt="こうがく祭"
-            className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
-          />
+          <img src={`${prefix}/title.png`} alt="こうがく祭" className="w-full k-sm:w-[58vw] k-lg:w-[40vw]" />
           {headline}
         </h1>
         <article
@@ -105,9 +101,7 @@ export default function Home() {
             <p>
               今年度はオンラインでの開催となりました。詳しくは
               <Link href="/about">
-                <a className="underline text-k-blue-dark cursor-pointer">
-                  オンライン開催について
-                </a>
+                <a className="underline text-k-blue-dark cursor-pointer">オンライン開催について</a>
               </Link>
               をご覧ください。
             </p>
@@ -127,9 +121,7 @@ export default function Home() {
           </section>
           <section>
             <Subtitle text="茨城大学工学部公式Instagram" />
-            <p>
-              茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。
-            </p>
+            <p>茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。</p>
             <a
               href="https://instagram.com/ibarakiuniversityhitachi?utm_medium=copy_link"
               className="block pt-3 pt-2 underline text-k-blue-dark cursor-pointer"
