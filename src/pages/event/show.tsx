@@ -73,7 +73,7 @@ const Show = () => {
           </a>
         </div>
         <div>
-          <Subtitle text="Ending" />
+          <Subtitle text="統合版" />
           <p className="p-2">2021こうがく祭第一幕から第二幕までの統合版です。</p>
           <a
             href="https://www.youtube.com/watch?v=-F51AwWCLgE"
@@ -114,7 +114,7 @@ const Show = () => {
             rel="noopener noreferrer"
             className="p-2 underline text-k-blue-dark cursor-pointer"
           >
-            展示サイトへ
+            YouTubeで見る
           </a>
         </div>
       </article>
