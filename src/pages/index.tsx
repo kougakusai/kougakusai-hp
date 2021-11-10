@@ -33,7 +33,7 @@ const headline = (
     企画のアーカイブ公開中!
     <br />
     <div>
-      <Link href="event/show">
+      <Link href={`${prefix}/event/show`}>
         <a className="inline-flex items-center px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
