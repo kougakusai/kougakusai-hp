@@ -22,35 +22,34 @@ const headline = (
   <span
     className={clsx(
       "mt-[-35%] k-sm:mt-[-25%] k-lg:mt-[-28%]",
-      "pl-[27vw] k-sm:pl-[8vw] k-lg:pl-[3vw]",
-      "k-lg:w-full float-left",
-      "text-[8vw] k-sm:text-[6vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
-      "text-yellow-200 brightness-125 blur-[0.8px] font-bold"
+      "pl-[20vw] k-sm:pl-[0vw] k-lg:pl-[0vw]",
+      " float-left",
+      "text-[5vw] k-sm:text-[4.5vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
+      "text-yellow-200 brightness-125 blur-[0.8px] font-bold "
     )}
   >
-    オンライン開催
+    2021年の開催は終了しました。
+    <br />
+    企画のアーカイブ公開中!
     <br />
     <div>
-      <a
-        href="https://youtu.be/R0o8vr7dHRk"
-        className="inline-flex items-center px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw] h-[8vw] k-sm:h-[6vw] k-lg:h-[2.8vw]"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-            clipRule="evenodd"
-          />
-        </svg>
-        <span>配信を見る</span>
-      </a>
+      <Link href="event/show">
+        <a className="inline-flex items-center px-[30px] py-[10px] bg-[#fe0e73] text-white rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-[8vw] k-sm:w-[6vw] k-lg:w-[2.8vw] h-[8vw] k-sm:h-[6vw] k-lg:h-[2.8vw]"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+              clipRule="evenodd"
+            />
+          </svg>
+          <span>企画を見る</span>
+        </a>
+      </Link>
     </div>
   </span>
 );
@@ -84,11 +83,7 @@ export default function Home() {
             "k-lg:top-[5vh] k-lg:left-[calc(50%-13vw)] m-auto"
           )}
         >
-          <img
-            src={`${prefix}/title.png`}
-            alt="こうがく祭"
-            className="w-full k-sm:w-[58vw] k-lg:w-[40vw]"
-          />
+          <img src={`${prefix}/title.png`} alt="こうがく祭" className="w-full k-sm:w-[58vw] k-lg:w-[40vw]" />
           {headline}
         </h1>
         <article
@@ -106,9 +101,7 @@ export default function Home() {
             <p>
               今年度はオンラインでの開催となりました。詳しくは
               <Link href="/about">
-                <a className="underline text-k-blue-dark cursor-pointer">
-                  オンライン開催について
-                </a>
+                <a className="underline text-k-blue-dark cursor-pointer">オンライン開催について</a>
               </Link>
               をご覧ください。
             </p>
@@ -128,9 +121,7 @@ export default function Home() {
           </section>
           <section>
             <Subtitle text="茨城大学工学部公式Instagram" />
-            <p>
-              茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。
-            </p>
+            <p>茨城大学工学部の公式Instagramアカウントです。茨城大学工学部の最新情報を発信いたします。</p>
             <a
               href="https://instagram.com/ibarakiuniversityhitachi?utm_medium=copy_link"
               className="block pt-3 pt-2 underline text-k-blue-dark cursor-pointer"
