@@ -132,7 +132,7 @@ export default function Home() {
             </p>
             <a
               href="https://instagram.com/ibarakiuniversityhitachi?utm_medium=copy_link"
-              className="block pt-3 pt-2 underline cursor-pointer text-k-blue-dark"
+              className="block pt-2 underline cursor-pointer text-k-blue-dark"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -18,7 +18,7 @@ const HTitleBand: VFC<Props> = (props) => {
       )}
       style={{ backgroundImage: "url('/rect.svg')" }}
     >
-      <img src={`${prefix}/decoration.svg`} className="w-[40px]" />
+      <img src={`${prefix}/decoration.svg`} alt="" className="w-[40px]" />
       <h2
         className={clsx(
           'pb-[2px] ml-[5px] text-[1.8rem] font-black leading-[75px]',

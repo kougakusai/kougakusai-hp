@@ -94,7 +94,7 @@ const Header: VFC = () => {
                 <Link href={pagePath}>
                   <a
                     className={clsx(
-                      'flex block w-full text-2xl border-b border-k-gray-dark',
+                      'flex w-full text-2xl border-b border-k-gray-dark',
                       'hover:opacity-60 transition-opacity duration-300',
                       'h-[44px] leading-[40px]',
                       'k-lg:h-[60px] k-lg:leading-[60px]'
