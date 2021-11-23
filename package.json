@@ -8,15 +8,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "yarn build && next start",
     "export": "next export",
-    "gen": "yarn run build && yarn run export",
+    "gen": "yarn build && yarn export",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
     "lint:next": "next lint --dir src",
     "fmt": "prettier --check 'src/**/*.{ts,tsx}'",
     "fmt:fix": "prettier --write 'src/**/*.{ts,tsx}'",
-    "fix": "yarn run fmt:fix && yarn run lint:fix"
+    "fix": "yarn fmt:fix && yarn lint:fix"
   },
   "dependencies": {
     "@types/react-transition-group": "^4.4.3",
