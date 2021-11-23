@@ -1,5 +1,5 @@
-import { VFC } from "react";
-import clsx from "clsx";
+import { VFC } from 'react';
+import clsx from 'clsx';
 
 type Props = {
   isExpand: boolean;
@@ -7,33 +7,33 @@ type Props = {
   className?: string;
 };
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const MenuButton: VFC<Props> = (props) => {
   return (
-    <div className={clsx("relative w-[150px]", props.className)}>
+    <div className={clsx('relative w-[150px]', props.className)}>
       <img src={`${prefix}/menuButton.svg`} alt="MenuToggleButton" />
 
       <button
-        className="absolute w-[70px] h-[60px] top-[calc(50%-25px)] left-[calc(50%-35px)]"
+        className="absolute top-[calc(50%-25px)] left-[calc(50%-35px)] w-[70px] h-[60px]"
         onClick={props.toggleIsExpand}
       >
         <div
           className={clsx(
-            "absolute bg-white w-[50px] h-px left-[calc(50%-27px)] transform duration-[400ms] ease-in-out",
-            props.isExpand ? "top-[20px] rotate-[225deg]" : "top-[6px]"
+            'absolute left-[calc(50%-27px)] w-[50px] h-px bg-white duration-[400ms] ease-in-out transform',
+            props.isExpand ? 'top-[20px] rotate-[225deg]' : 'top-[6px]'
           )}
         />
         <div
           className={clsx(
-            "absolute bg-white w-[50px] h-px top-[20px] left-[calc(50%-27px)] transform duration-[400ms] ease-in-out",
-            { "rotate-[225deg] bg-transparent": props.isExpand }
+            'absolute top-[20px] left-[calc(50%-27px)] w-[50px] h-px bg-white duration-[400ms] ease-in-out transform',
+            { 'rotate-[225deg] bg-transparent': props.isExpand }
           )}
         />
         <div
           className={clsx(
-            "absolute bg-white w-[50px] h-px left-[calc(50%-27px)] transform duration-[400ms] ease-in-out",
-            props.isExpand ? "top-[20px] rotate-[135deg]" : "top-[34px]"
+            'absolute left-[calc(50%-27px)] w-[50px] h-px bg-white duration-[400ms] ease-in-out transform',
+            props.isExpand ? 'top-[20px] rotate-[135deg]' : 'top-[34px]'
           )}
         />
 

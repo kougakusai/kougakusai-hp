@@ -1,4 +1,4 @@
-import type { VFC } from "react";
+import type { VFC } from 'react';
 
 type Props = {
   text: string;
@@ -6,7 +6,7 @@ type Props = {
 
 const Subtitle: VFC<Props> = (props) => {
   return (
-    <h2 className="text-k-gray-light text-[2rem] font-bold border-l-[5px] border-k-sky px-[0.5em] py-[0.25em] mb-[30px]">
+    <h2 className="py-[0.25em] px-[0.5em] mb-[30px] text-[2rem] font-bold border-l-[5px] border-k-sky text-k-gray-light">
       {props.text}
     </h2>
   );

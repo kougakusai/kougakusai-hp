@@ -36,8 +36,10 @@ const Contact = () => {
       <Head>
         <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
-      <article className="text-[1.5rem] k-lg:text-[1.8rem] relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
-        <p className="p-2">質問等があれば下記連絡先へお気軽にお問い合わせください。</p>
+      <article className="relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)] text-[1.5rem] k-lg:text-[1.8rem]">
+        <p className="p-2">
+          質問等があれば下記連絡先へお気軽にお問い合わせください。
+        </p>
         <br />
         <div className="space-y-[50px]">
           {contacts.map(({ type, name, text, link }) => {
@@ -46,13 +48,15 @@ const Contact = () => {
                 <Subtitle text={name} />
                 <a
                   onClick={() => {
-                    const jump: boolean = confirm(`${type}でこうがく祭へ連絡を取りますか？\n（${type}を開きます。）`);
+                    const jump: boolean = confirm(
+                      `${type}でこうがく祭へ連絡を取りますか？\n（${type}を開きます。）`
+                    );
                     if (jump) {
                       window.open(`${link}`, '_blank', 'noreferrer');
                     }
                     return false;
                   }}
-                  className="p-2 underline text-k-blue-dark cursor-pointer"
+                  className="p-2 underline cursor-pointer text-k-blue-dark"
                 >
                   {text}
                 </a>

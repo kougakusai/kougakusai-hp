@@ -1,5 +1,5 @@
-import { VFC } from "react";
-import clsx from "clsx";
+import { VFC } from 'react';
+import clsx from 'clsx';
 
 type Props = {
   className?: string;
@@ -8,22 +8,22 @@ type Props = {
 const EventDay: VFC<Props> = (props) => {
   return (
     <div className={clsx(props.className)}>
-      <div className="z-10 w-[120px] h-[120px] relative k-lg:scale-[1.48] k-lg:top-[29px] k-lg:right-[29px]">
+      <div className="relative k-lg:top-[29px] k-lg:right-[29px] z-10 w-[120px] h-[120px] k-lg:scale-[1.48]">
         {/* ↓navy polygon: z-index=30*/}
         <div
           className={clsx(
-            "z-30 top-0 right-0",
-            "bg-k-navy-dark w-[117px] h-[76px] absolute mb-[33px]",
-            "flex justify-center items-center",
-            "after:w-[117px] after:h-0 after:absolute after:bottom-0 after:left-0",
-            "after:border-t-k-navy-dark after:border-t-[41px]" /* div本体―after間に隙間ができることの防止 */,
-            "after:border-l-[40px] after:border-l-transparent",
-            "after:border-r-0 after:border-b-0",
-            "after:top-[99%]" /* div本体―after間に隙間ができることの防止 */
+            'top-0 right-0 z-30',
+            'absolute mb-[33px] w-[117px] h-[76px] bg-k-navy-dark',
+            'flex justify-center items-center',
+            'after:absolute after:bottom-0 after:left-0 after:w-[117px] after:h-0',
+            'after:border-t-[41px] after:border-t-k-navy-dark' /* div本体―after間に隙間ができることの防止 */,
+            'after:border-l-[40px] after:border-l-transparent',
+            'after:border-r-0 after:border-b-0',
+            'after:top-[99%]' /* div本体―after間に隙間ができることの防止 */
           )}
         >
           {/* ↓開催日表示テキスト:z-index=30 */}
-          <div className="z-30 k-lg:scale-[0.9] text-center translate-x-[5px] translate-y-[20px] text-[#94DD26] text-4xl font-bold slashed-zero brightness-125 saturate-200 glitch">
+          <div className="z-30 text-4xl font-bold slashed-zero text-center text-[#94DD26] brightness-125 saturate-200 k-lg:scale-[0.9] translate-x-[5px] translate-y-[20px] glitch">
             <p className="tracking-[0.8rem]">企画</p>
             <p className="tracking-[0.8rem]">展示中</p>
           </div>
@@ -31,13 +31,13 @@ const EventDay: VFC<Props> = (props) => {
         {/* ↓lime polygon:z-index=20 */}
         <div
           className={clsx(
-            "z-20",
-            "bg-[#94DD26] w-[120px] h-[79px] absolute mb-[40px] top-0",
-            "after:w-[120px] after:h-0 after:absolute after:bottom-0 after:left-0",
-            "after:border-t-[#94DD26] after:border-t-[41px]" /* div本体―after間に隙間ができることの防止 */,
-            "after:border-l-[40px] after:border-l-transparent",
-            "after:border-r-0 after:border-b-0",
-            "after:top-[99%]" /* div本体―after間に隙間ができることの防止 */
+            'z-20',
+            'absolute top-0 mb-[40px] w-[120px] h-[79px] bg-[#94DD26]',
+            'after:absolute after:bottom-0 after:left-0 after:w-[120px] after:h-0',
+            'after:border-t-[41px] after:border-t-[#94DD26]' /* div本体―after間に隙間ができることの防止 */,
+            'after:border-l-[40px] after:border-l-transparent',
+            'after:border-r-0 after:border-b-0',
+            'after:top-[99%]' /* div本体―after間に隙間ができることの防止 */
           )}
         />
       </div>

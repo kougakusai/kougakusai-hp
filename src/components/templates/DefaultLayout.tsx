@@ -1,7 +1,7 @@
-import type { ReactNode, VFC } from "react";
-import Header from "src/components/modules/Header/Header";
-import Footer from "src/components/modules/Footer/Footer";
-import EventDay from "src/components/modules/EventDay";
+import type { ReactNode, VFC } from 'react';
+import Header from 'src/components/modules/Header/Header';
+import Footer from 'src/components/modules/Footer/Footer';
+import EventDay from 'src/components/modules/EventDay';
 
 type Props = {
   children: ReactNode;

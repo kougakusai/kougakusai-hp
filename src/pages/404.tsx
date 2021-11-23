@@ -1,10 +1,10 @@
-import type { ReactElement } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import ArticleLayout from "src/components/templates/ArticleLayout";
-import Subtitle from "src/components/modules/Subtitle";
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
+import Subtitle from 'src/components/modules/Subtitle';
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 export default function Custom404() {
   return (
@@ -21,7 +21,11 @@ export default function Custom404() {
             <a className="underline text-k-blue-dark">トップページへ</a>
           </Link>
         </p>
-        <img src={`${prefix}/sleep.png`} alt="寝てるイメージキャラクター" className="w-[200px] m-auto sm:m-0" />
+        <img
+          src={`${prefix}/sleep.png`}
+          alt="寝てるイメージキャラクター"
+          className="m-auto sm:m-0 w-[200px]"
+        />
       </article>
     </>
   );
