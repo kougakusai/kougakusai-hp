@@ -32,5 +32,27 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }) => {
+      const newUtilities = {
+        ".text-shadow": {
+          "text-shadow": "1px 0px 10px",
+        },
+        ".text-shadow-md": {
+          "text-shadow": "1px 0px 15px",
+        },
+        ".text-shadow-lg": {
+          "text-shadow": "1px 0px 20px",
+        },
+        ".text-shadow-xl": {
+          "text-shadow": "1px 0px 30px",
+        },
+        ".text-shadow-none": {
+          "text-shadow": "0px 0px 0px",
+        },
+      };
+
+      addUtilities(newUtilities);
+    },
+  ],
 };

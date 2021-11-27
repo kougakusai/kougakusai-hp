@@ -25,7 +25,7 @@ const headline = (
       "pl-[20vw] k-sm:pl-[0vw] k-lg:pl-[0vw]",
       " float-left",
       "text-[5vw] k-sm:text-[4.5vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest",
-      "text-yellow-200 brightness-125 blur-[0.8px] font-bold "
+      "text-yellow-200 brightness-125 text-shadow-lg font-bold "
     )}
   >
     2021年の開催は終了しました。
@@ -47,7 +47,7 @@ const headline = (
               clipRule="evenodd"
             />
           </svg>
-          <span>企画を見る</span>
+          <span className="text-shadow-none">企画を見る</span>
         </a>
       </Link>
     </div>
