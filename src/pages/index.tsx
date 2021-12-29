@@ -4,8 +4,7 @@ import Head from "next/head";
 import Link from "next/link";
 import DefaultLayout from "src/components/templates/DefaultLayout";
 import Subtitle from "src/components/modules/Subtitle";
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { prefix } from "src/utils/constants";
 
 const announcement = [
   {

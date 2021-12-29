@@ -1,6 +1,5 @@
 import { VFC } from "react";
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+import { prefix } from "src/utils/constants";
 
 type Props = {
   className?: string;

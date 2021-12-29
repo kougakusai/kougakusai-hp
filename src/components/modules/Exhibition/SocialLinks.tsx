@@ -11,8 +11,6 @@ type Props = {
   className?: string;
 };
 
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
-
 const SocialLinks: VFC<Props> = (props) => {
   const accounts = [
     {
