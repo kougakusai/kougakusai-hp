@@ -50,6 +50,37 @@ GitHub Pages にデプロイされるものと同じ状態なので、ローカ�
 
 VSCode で編集している場合は保存時に自動実行されるようになっているので、基本的には手動で実行する必要はありません。
 
+## Branch
+
+### `gh-pages`
+
+- 開発者が直接触れる必要はありません。
+- GitHub Actions により`main`のコードをビルドした結果が Push されます。
+- GitHub Pages でホスティングされている静的ファイルです。
+
+### `hotfix`
+
+- 本番環境の問題に緊急で対処する場合のみ作成するブランチです。
+- `main`から切り、`main`に Pull Request を発行します。
+- 対応が完了したら`develop`にも Pull Request を発行してください。
+
+### `main`
+
+- 直接 Push は禁止です。`develop`または`hotfix`から Pull Request を発行してください。
+- `main`への Push により GitHub Actions のビルドタスクがトリガーされ、本番環境にデプロイするファイルが生成されます。
+
+### `develop`
+
+- 直接 Push は基本的に禁止です。`feature`または`hotfix`から Pull Request を発行してください。
+- 開発中のコードが集まるブランチです。
+- `feature`は`develop`から切るようにしてください。
+
+### `feature`
+
+- 自身が担当している作業を行うためのブランチです。
+- 関連 Issue がある場合は、その Issue の番号をブランチ名にすると良いでしょう。例）`feature/#000`
+- 関連 Issue がない場合は、適宜命名してください。例）`feature/foo-bar-baz`
+
 ## Notes
 
 - `npm`は使用できません。`yarn`を使用してください。

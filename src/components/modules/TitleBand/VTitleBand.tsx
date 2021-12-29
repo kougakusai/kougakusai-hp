@@ -1,5 +1,5 @@
-import type { VFC } from "react";
-import clsx from "clsx";
+import type { VFC } from 'react';
+import clsx from 'clsx';
 
 type Props = {
   text: string;
@@ -10,15 +10,15 @@ const VTitleBand: VFC<Props> = (props) => {
   return (
     <div
       className={clsx(
-        "bg-k-navy-light text-white w-[116px] h-screen",
+        'w-[116px] h-screen text-white bg-k-navy-light',
         props.className
       )}
     >
       <div
-        className="relative w-[1080px] h-[110px] origin-bottom-left transform rotate-90"
+        className="relative w-[1080px] h-[110px] transform origin-bottom-left rotate-90"
         style={{ backgroundImage: "url('/rect.svg')" }}
       >
-        <div className="absolute top-[40%] left-[20vh] text-white text-[3.5rem] font-semibold">
+        <div className="absolute top-[40%] left-[20vh] text-[3.5rem] font-semibold text-white">
           {props.text}
         </div>
       </div>

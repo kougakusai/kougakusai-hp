@@ -1,7 +1,7 @@
-import type { ReactElement } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import ArticleLayout from "src/components/templates/ArticleLayout";
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
 
 export default function About() {
   return (
@@ -16,7 +16,7 @@ export default function About() {
           昨年度は研究室紹介やサークル企画等を特設サイト上にて掲載しました。
           今年度の配信は
           <Link href="/event/show">
-            <a className="p-2 underline text-k-blue-dark cursor-pointer">
+            <a className="p-2 underline cursor-pointer text-k-blue-dark">
               企画一覧ページ
             </a>
           </Link>

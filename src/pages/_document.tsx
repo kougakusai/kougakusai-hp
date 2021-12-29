@@ -1,5 +1,5 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { prefix } from "src/utils/constants";
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import { prefix } from 'src/utils/constants';
 
 class MyDocument extends Document {
   render() {

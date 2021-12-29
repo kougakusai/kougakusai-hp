@@ -1,9 +1,9 @@
-import type { ReactElement } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import ArticleLayout from "src/components/templates/ArticleLayout";
-import Subtitle from "src/components/modules/Subtitle";
-import { prefix } from "src/utils/constants";
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
+import Subtitle from 'src/components/modules/Subtitle';
+import { prefix } from 'src/utils/constants';
 
 export default function Custom404() {
   return (

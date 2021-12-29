@@ -1,5 +1,5 @@
-import { VFC } from "react";
-import { prefix } from "src/utils/constants";
+import { VFC } from 'react';
+import { prefix } from 'src/utils/constants';
 
 type Props = {
   className?: string;
@@ -15,7 +15,7 @@ const monoSvg = (
   </svg>
 );
 
-const colorPath = "/instagram.svg";
+const colorPath = '/instagram.svg';
 
 const InstagramIcon: VFC<Props> = (props) => {
   return (
@@ -26,7 +26,7 @@ const InstagramIcon: VFC<Props> = (props) => {
       <img
         src={prefix + colorPath}
         alt="Instagram"
-        className="opacity-0 hover:opacity-100 duration-[400ms] w-full h-full mt-[-100%]"
+        className="mt-[-100%] w-full h-full opacity-0 hover:opacity-100 duration-[400ms]"
       />
     </div>
   );

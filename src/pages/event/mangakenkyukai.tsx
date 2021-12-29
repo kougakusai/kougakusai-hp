@@ -1,22 +1,22 @@
-import type { ReactElement } from "react";
-import Head from "next/head";
-import clsx from "clsx";
-import ArticleLayout from "src/components/templates/ArticleLayout";
-import Subtitle from "src/components/modules/Subtitle";
-import Picture from "src/components/modules/Exhibition/Picture";
-import SocialLinks from "src/components/modules/Exhibition/SocialLinks";
+import type { ReactElement } from 'react';
+import Head from 'next/head';
+import clsx from 'clsx';
+import ArticleLayout from 'src/components/templates/ArticleLayout';
+import Subtitle from 'src/components/modules/Subtitle';
+import Picture from 'src/components/modules/Exhibition/Picture';
+import SocialLinks from 'src/components/modules/Exhibition/SocialLinks';
 
 // const expireDate = "11月06日(土)";
 
 const isAvail = false;
 
 const info = {
-  name: "漫画研究会",
-  nameen: "IUCA",
+  name: '漫画研究会',
+  nameen: 'IUCA',
   link: {
-    twitter: "https://twitter.com/iuca_unofficial",
+    twitter: 'https://twitter.com/iuca_unofficial',
   },
-  introduction: "茨城大学漫画研究会の作品展示です。",
+  introduction: '茨城大学漫画研究会の作品展示です。',
   pcexp: (
     <>
       ポストカードへの印刷は終了しました。
@@ -26,61 +26,61 @@ const info = {
 
   contents: [
     {
-      title: "勝利の鼓動",
+      title: '勝利の鼓動',
       picPath:
-        "https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN",
-      pn: "飛燕",
+        'https://drive.google.com/uc?id=1ABRshTDa-iXN5ddEKrDK-ost1LOHvPSN',
+      pn: '飛燕',
     },
     {
-      title: "四年間のあとがき",
+      title: '四年間のあとがき',
       picPath:
-        "https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq",
-      pn: "植物好きの人",
+        'https://drive.google.com/uc?id=1IikyebIWPUphOsKYKewYjKsxVngzDYOq',
+      pn: '植物好きの人',
     },
     {
-      title: "対空番長",
+      title: '対空番長',
       picPath:
-        "https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4",
-      pn: "arutoron",
+        'https://drive.google.com/uc?id=1DU6jT3-koFTCpF0l9dvsrj9rw-tqI5v4',
+      pn: 'arutoron',
     },
     {
-      title: "躍動トリオ",
+      title: '躍動トリオ',
       picPath:
-        "https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD",
-      pn: "抹茶ソーダ",
+        'https://drive.google.com/uc?id=10ygdB1SnFhGaB6rmKKmbmCWW3_BodjtD',
+      pn: '抹茶ソーダ',
     },
     {
-      title: "Tell Your World",
+      title: 'Tell Your World',
       picPath:
-        "https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ",
-      pn: "メイユー",
-      pcCode: "LNFB7CUT",
+        'https://drive.google.com/uc?id=1HPO-ySJEgXnu38xId78MxJby1_5ewzyJ',
+      pn: 'メイユー',
+      pcCode: 'LNFB7CUT',
       isAvail: isAvail,
     },
     {
-      title: "鳴神",
+      title: '鳴神',
       picPath:
-        "https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K",
-      pn: "光",
-      pcCode: "45Q488QK",
+        'https://drive.google.com/uc?id=1Ea0hx1YBrgcKtGRQCAddxHoeeCyhg33K',
+      pn: '光',
+      pcCode: '45Q488QK',
       isAvail: isAvail,
     },
   ],
 };
 
 export default function Mangakenkyukai() {
-  const weekDaysKs = ["日", "月", "火", "水", "木", "金", "土"];
+  const weekDaysKs = ['日', '月', '火', '水', '木', '金', '土'];
 
   return (
     <>
       <Head>
         <title>2021年こうがく祭公式HP | 茨城大学</title>
       </Head>
-      <article className="relative text-[1.5rem] k-lg:text-[1.8rem] top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)]">
-        <section className="flex-col text-[1.5rem] k-lg:text-[1.8rem] p-4">
+      <article className="relative top-[calc(-1.2rem-26px)] k-lg:top-[calc(-1.2rem-27px)] text-[1.5rem] k-lg:text-[1.8rem]">
+        <section className="flex-col p-4 text-[1.5rem] k-lg:text-[1.8rem]">
           <div className="flex">
             <Subtitle text={`${info.name}展示`} />
-            <div className="text-center float-right">
+            <div className="float-right text-center">
               {/* <span>{info.name}</span> */}
               <SocialLinks name={info.name} twitter={info.link.twitter} />
             </div>
@@ -102,8 +102,8 @@ export default function Mangakenkyukai() {
           {/*</span>
           ) */}
         </section>
-        <hr className="border-2 mt-8 mb-16" />
-        <section className={clsx("w-full h-full", "space-y-24 divide-y-2")}>
+        <hr className="mt-8 mb-16 border-2" />
+        <section className={clsx('w-full h-full', 'space-y-24 divide-y-2')}>
           {info.contents.map(({ title, picPath, pn, pcCode, isAvail }) => {
             return (
               <Picture
