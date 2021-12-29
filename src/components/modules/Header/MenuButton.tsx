@@ -1,13 +1,12 @@
 import { VFC } from 'react';
 import clsx from 'clsx';
+import { prefix } from 'src/utils/constants';
 
 type Props = {
   isExpand: boolean;
   toggleIsExpand: () => void;
   className?: string;
 };
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const MenuButton: VFC<Props> = (props) => {
   return (

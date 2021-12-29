@@ -4,8 +4,7 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import MenuButton from './MenuButton';
 import SNSButtons from '../SNSButtons/SNSButtons';
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { prefix } from 'src/utils/constants';
 
 const links = [
   {

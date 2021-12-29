@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { prefix } from 'src/utils/constants';
 
 class MyDocument extends Document {
   render() {

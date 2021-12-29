@@ -1,12 +1,11 @@
 import type { VFC } from 'react';
 import clsx from 'clsx';
+import { prefix } from 'src/utils/constants';
 
 type Props = {
   text: string;
   className?: string;
 };
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 const HTitleBand: VFC<Props> = (props) => {
   return (

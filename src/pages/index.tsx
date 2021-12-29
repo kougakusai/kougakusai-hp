@@ -4,8 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import DefaultLayout from 'src/components/templates/DefaultLayout';
 import Subtitle from 'src/components/modules/Subtitle';
-
-const prefix = process.env.NEXT_PUBLIC_BASE_PATH || '';
+import { prefix } from 'src/utils/constants';
 
 const announcement = [
   {
@@ -23,9 +22,9 @@ const headline = (
     className={clsx(
       'mt-[-35%] k-sm:mt-[-25%] k-lg:mt-[-28%]',
       'pl-[20vw] k-sm:pl-[0vw] k-lg:pl-[0vw]',
-      'float-left',
-      'text-[5vw] k-sm:text-[4.5vw] k-lg:text-[2.8vw] tracking-widest leading-normal text-center',
-      'font-bold text-yellow-200 blur-[0.8px] brightness-125'
+      ' float-left',
+      'text-[5vw] k-sm:text-[4.5vw] k-lg:text-[2.8vw] text-center leading-normal tracking-widest',
+      'text-yellow-200 brightness-125 text-shadow-lg font-bold '
     )}
   >
     2021年の開催は終了しました。
@@ -47,7 +46,7 @@ const headline = (
               clipRule="evenodd"
             />
           </svg>
-          <span>企画を見る</span>
+          <span className="text-shadow-none">企画を見る</span>
         </a>
       </Link>
     </div>
